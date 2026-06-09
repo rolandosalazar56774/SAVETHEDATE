@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lauren &amp; Rolando — Waikiki, Hawaii 2027</title>
+  <meta name="description" content="Join Lauren Rodriguez &amp; Rolando Salazar for their destination wedding in Waikiki, Hawaii — Coming 2027." />
+  <meta property="og:title" content="Lauren &amp; Rolando — Waikiki 2027" />
+  <meta property="og:description" content="A destination wedding in paradise. Join us in Waikiki, Hawaii — Coming 2027." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pearl:#F8F6F2; --white:#FFFFFF; --ocean:#2C6E8A; --ocean-light:#4A9BB8;
+      --navy:#0F2B3D; --navy-deep:#071926; --champagne:#C9A96E; --champagne-lt:#E8D5A8;
+      --gold:#D4A944; --sunset:#E8835A;
+      --font-display:'Cormorant Garamond',Georgia,serif;
+      --font-heading:'Playfair Display',Georgia,serif;
+      --font-body:'Jost',system-ui,sans-serif;
+      --ease-luxury:cubic-bezier(0.16,1,0.3,1);
+      --ease-silk:cubic-bezier(0.4,0,0.2,1);
+      --section-pad:clamp(5rem,10vw,9rem);
+      --gutter:clamp(1.25rem,5vw,3rem);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:var(--font-body);font-weight:300;color:var(--navy);background:var(--pearl);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%;height:auto}
+    a{color:inherit;text-decoration:none}
+    button{cursor:pointer;border:none;background:none;font-family:inherit}
+    ul{list-style:none}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}
+
+    /* Typography */
+    .t-eyebrow{font-family:var(--font-body);font-weight:400;font-size:clamp(0.6rem,1.2vw,0.72rem);letter-spacing:0.3em;text-transform:uppercase;color:var(--champagne)}
+    .t-display{font-family:var(--font-display);font-weight:300;font-size:clamp(3.2rem,8vw,8rem);line-height:0.95;letter-spacing:-0.01em}
+    .t-heading{font-family:var(--font-heading);font-weight:400;font-size:clamp(2rem,4vw,3.5rem);line-height:1.1}
+    .t-subheading{font-family:var(--font-display);font-weight:300;font-style:italic;font-size:clamp(1.2rem,2.5vw,1.8rem);line-height:1.3}
+    .t-body{font-size:clamp(0.9rem,1.5vw,1rem);line-height:1.8;font-weight:300}
+
+    /* Layout */
+    .container{width:100%;max-width:1280px;margin:0 auto;padding:0 var(--gutter)}
+    .container--narrow{max-width:860px}
+
+    /* Ornament divider */
+    .divider-ornament{display:flex;align-items:center;gap:1.2rem;justify-content:center;margin:2rem 0;opacity:0.55}
+    .divider-ornament::before,.divider-ornament::after{content:'';flex:1;max-width:80px;height:1px;background:currentColor}
+
+    /* Buttons */
+    .btn-primary{display:inline-flex;align-items:center;gap:0.7rem;padding:1rem 2.5rem;background:transparent;border:1px solid var(--champagne);color:var(--champagne);font-family:var(--font-body);font-size:0.72rem;font-weight:400;letter-spacing:0.25em;text-transform:uppercase;transition:color 0.4s var(--ease-silk);position:relative;overflow:hidden}
+    .btn-primary::before{content:'';position:absolute;inset:0;background:var(--champagne);transform:scaleX(0);transform-origin:left;transition:transform 0.4s var(--ease-luxury)}
+    .btn-primary:hover::before{transform:scaleX(1)}
+    .btn-primary:hover{color:var(--navy-deep)}
+    .btn-primary span,.btn-primary svg{position:relative;z-index:1}
+
+    /* Reveal */
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.9s var(--ease-luxury),transform 0.9s var(--ease-luxury)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .reveal-delay-1{transition-delay:0.1s}
+    .reveal-delay-2{transition-delay:0.22s}
+    .reveal-delay-3{transition-delay:0.36s}
+    .reveal-delay-4{transition-delay:0.5s}
+
+    /* Preloader */
+    #preloader{position:fixed;inset:0;background:var(--navy-deep);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;transition:opacity 0.8s var(--ease-luxury),visibility 0.8s}
+    #preloader.hidden{opacity:0;visibility:hidden}
+    .preloader-monogram{font-family:var(--font-display);font-size:3.5rem;font-weight:300;color:var(--champagne);letter-spacing:0.15em;animation:preloaderPulse 1.6s ease-in-out infinite}
+    .preloader-line{width:0;height:1px;background:var(--champagne);margin-top:1.5rem;animation:preloaderLine 1.8s var(--ease-luxury) forwards}
+    @keyframes preloaderPulse{0%,100%{opacity:0.5}50%{opacity:1}}
+    @keyframes preloaderLine{to{width:120px}}
+
+    /* Nav */
+    #nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.4rem var(--gutter);display:flex;align-items:center;justify-content:space-between;transition:background 0.5s,padding 0.4s,backdrop-filter 0.5s}
+    #nav.scrolled{background:rgba(7,25,38,0.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);padding:0.9rem var(--gutter)}
+    .nav-monogram{font-family:var(--font-display);font-size:1.6rem;font-weight:300;color:var(--white);letter-spacing:0.1em;opacity:0.9}
+    .nav-links{display:flex;gap:2.2rem;align-items:center}
+    .nav-links a{font-size:0.65rem;font-weight:400;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.75);transition:color 0.3s}
+    .nav-links a:hover{color:var(--champagne)}
+    .nav-rsvp{color:var(--champagne)!important;border:1px solid rgba(201,169,110,0.4);padding:0.5rem 1.2rem;transition:background 0.3s,color 0.3s!important}
+    .nav-rsvp:hover{background:var(--champagne);color:var(--navy-deep)!important}
+    .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+    .nav-hamburger span{display:block;width:26px;height:1px;background:var(--white);transition:transform 0.3s,opacity 0.3s}
+    .nav-hamburger.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+    .nav-hamburger.open span:nth-child(2){opacity:0}
+    .nav-hamburger.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+    .nav-mobile{display:none;position:fixed;inset:0;background:rgba(7,25,38,0.97);backdrop-filter:blur(24px);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:2.5rem}
+    .nav-mobile.open{display:flex}
+    .nav-mobile a{font-family:var(--font-display);font-size:2rem;font-weight:300;color:var(--white);letter-spacing:0.05em;transition:color 0.3s}
+    .nav-mobile a:hover{color:var(--champagne)}
+    @media(max-width:900px){.nav-links{display:none}.nav-hamburger{display:flex}}
+
+    /* Hero */
+    #hero{position:relative;height:100dvh;min-height:600px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+    .hero-slides{position:absolute;inset:0;z-index:0}
+    .hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.8s var(--ease-silk);transform:scale(1.04)}
+    .hero-slide.active{opacity:1;animation:heroKenBurns 12s ease-in-out forwards}
+    /* ======================================================
+       SWAP HERO IMAGES — replace these with your own photos
+       Recommended: 1920x1080px or larger
+    ====================================================== */
+    .hero-slide:nth-child(1){background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=85')}
+    .hero-slide:nth-child(2){background-image:url('https://images.unsplash.com/photo-1542259009477-d625272157b7?w=1920&q=85')}
+    .hero-slide:nth-child(3){background-image:url('https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=1920&q=85')}
+    .hero-slide:nth-child(4){background-image:url('https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1920&q=85')}
+    @keyframes heroKenBurns{from{transform:scale(1.04)}to{transform:scale(1.0)}}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(165deg,rgba(7,25,38,0.3) 0%,rgba(15,43,61,0.4) 50%,rgba(7,25,38,0.65) 100%);z-index:1}
+    .hero-content{position:relative;z-index:2;text-align:center;color:var(--white);padding:0 var(--gutter);max-width:900px}
+    .hero-eyebrow{font-family:var(--font-body);font-size:0.68rem;font-weight:400;letter-spacing:0.38em;text-transform:uppercase;color:var(--champagne-lt);opacity:0;animation:heroFadeUp 1s var(--ease-luxury) 0.4s forwards}
+    .hero-title{font-family:var(--font-display);font-weight:300;font-size:clamp(3.6rem,9vw,9.5rem);line-height:0.92;letter-spacing:-0.01em;margin:1.2rem 0;opacity:0;animation:heroFadeUp 1.1s var(--ease-luxury) 0.7s forwards}
+    .hero-title em{font-style:italic;color:var(--champagne-lt)}
+    .hero-names{font-family:var(--font-display);font-size:clamp(1.2rem,3vw,2rem);font-weight:300;letter-spacing:0.12em;margin-bottom:0.7rem;opacity:0;animation:heroFadeUp 1.1s var(--ease-luxury) 1s forwards}
+    .hero-amp{color:var(--champagne);font-style:italic;font-size:1.3em}
+    .hero-sub{font-size:clamp(0.78rem,1.5vw,0.92rem);font-weight:300;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.72);margin-bottom:2.5rem;opacity:0;animation:heroFadeUp 1.1s var(--ease-luxury) 1.2s forwards}
+    .hero-cta{opacity:0;animation:heroFadeUp 1.1s var(--ease-luxury) 1.5s forwards}
+    .hero-cta .btn-primary{color:var(--champagne-lt);border-color:rgba(201,169,110,0.6)}
+    @keyframes heroFadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .hero-scroll-hint{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:0.6rem;color:rgba(255,255,255,0.5);font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;opacity:0;animation:heroFadeUp 1s var(--ease-luxury) 2.2s forwards}
+    .scroll-mouse{width:22px;height:34px;border:1px solid rgba(255,255,255,0.35);border-radius:12px;display:flex;justify-content:center;padding-top:5px}
+    .scroll-mouse::before{content:'';width:3px;height:7px;background:var(--champagne);border-radius:2px;animation:scrollDot 2s infinite}
+    @keyframes scrollDot{0%{transform:translateY(0);opacity:1}100%{transform:translateY(12px);opacity:0}}
+    .hero-dots{position:absolute;bottom:2.5rem;right:var(--gutter);z-index:2;display:flex;flex-direction:column;gap:8px}
+    .hero-dot{width:2px;height:18px;background:rgba(255,255,255,0.28);border:none;cursor:pointer;transition:background 0.3s,height 0.3s}
+    .hero-dot.active{background:var(--champagne);height:30px}
+
+    /* Save the date */
+    #save-the-date{padding:var(--section-pad) var(--gutter);background:var(--pearl);text-align:center;position:relative;overflow:hidden}
+    .std-bg-pattern{position:absolute;inset:0;opacity:0.035;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 C20 8 8 12 0 10 C8 20 12 32 10 40 C20 32 32 28 40 30 C32 20 28 8 30 0z' fill='%230F2B3D' /%3E%3C/svg%3E");background-size:60px 60px}
+    .std-inner{position:relative;z-index:1}
+    .std-location{font-size:0.7rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--ocean);margin:1rem 0}
+    .std-year{font-family:var(--font-display);font-size:clamp(5rem,16vw,14rem);font-weight:300;line-height:1;background:linear-gradient(135deg,var(--champagne),var(--gold),var(--champagne-lt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-0.02em;margin:0.5rem 0 1rem}
+    .std-announcement{font-family:var(--font-display);font-style:italic;font-size:clamp(1rem,2.2vw,1.4rem);color:var(--navy);opacity:0.65;margin-bottom:3rem}
+    .countdown-placeholder{display:inline-flex;gap:clamp(1.5rem,4vw,3rem);margin:2rem auto;padding:2rem clamp(1.5rem,5vw,4rem);border:1px solid rgba(201,169,110,0.25);background:rgba(255,255,255,0.5);backdrop-filter:blur(8px)}
+    .countdown-unit{text-align:center}
+    .countdown-num{font-family:var(--font-display);font-size:clamp(2rem,5vw,3.5rem);font-weight:300;color:var(--navy);line-height:1;display:block}
+    .countdown-label{font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--champagne);margin-top:0.4rem;display:block}
+    .countdown-sep{font-family:var(--font-display);font-size:2rem;color:var(--champagne);opacity:0.4;align-self:center;margin-top:-0.8rem}
+    .countdown-note{font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--ocean);margin-top:1rem}
+
+    /* Waves */
+    .wave-divider{width:100%;overflow:hidden;line-height:0;margin:-2px 0}
+    .wave-divider svg{display:block;width:100%}
+    .ocean-section{position:relative;background:linear-gradient(180deg,#0F2B3D 0%,#071926 100%);padding:3rem 0 0;overflow:hidden}
+    .animated-waves{width:100%;height:140px;position:relative}
+    .animated-waves svg{position:absolute;bottom:0;width:200%;animation:waveSweep 18s linear infinite}
+    .animated-waves svg:nth-child(2){animation-duration:12s;animation-direction:reverse;opacity:0.5}
+    .animated-waves svg:nth-child(3){animation-duration:22s;opacity:0.3}
+    @keyframes waveSweep{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* Details */
+    #details{padding:var(--section-pad) var(--gutter);background:var(--navy-deep);color:var(--white);text-align:center}
+    .details-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;margin-top:4rem;border:1px solid rgba(201,169,110,0.12)}
+    .detail-card{padding:3rem 2rem;border:1px solid rgba(201,169,110,0.12);text-align:center;transition:background 0.4s;position:relative;overflow:hidden}
+    .detail-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--champagne),transparent);transform:scaleX(0);transition:transform 0.5s var(--ease-luxury)}
+    .detail-card:hover::before{transform:scaleX(1)}
+    .detail-card:hover{background:rgba(201,169,110,0.04)}
+    .detail-icon{width:44px;height:44px;margin:0 auto 1.5rem;color:var(--champagne);opacity:0.8}
+    .detail-title{font-family:var(--font-body);font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--champagne);margin-bottom:1rem}
+    .detail-value{font-family:var(--font-display);font-size:1.5rem;font-weight:300;color:var(--white);margin-bottom:0.5rem}
+    .detail-sub{font-size:0.78rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em}
+    .coming-soon-badge{display:inline-block;margin-top:0.8rem;padding:0.3rem 1rem;border:1px solid rgba(201,169,110,0.3);font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--champagne);opacity:0.75}
+
+    /* Story */
+    #story{padding:var(--section-pad) var(--gutter);background:var(--pearl)}
+    .story-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,6rem);align-items:center;margin-top:4rem}
+    .story-image-stack{position:relative;height:550px}
+    .story-img{position:absolute;border:6px solid var(--white);box-shadow:0 24px 64px rgba(15,43,61,0.14);background-size:cover;background-position:center}
+    /* ======================================================
+       SWAP STORY IMAGES — replace URLs below
+    ====================================================== */
+    .story-img-1{width:72%;height:420px;top:0;left:0;background-image:url('https://images.unsplash.com/photo-1537043050152-b99c8f525e09?w=800&q=80')}
+    .story-img-2{width:52%;height:280px;bottom:0;right:0;background-image:url('https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?w=600&q=80')}
+    .story-float-text{position:absolute;bottom:2.5rem;left:52%;background:var(--navy-deep);color:var(--champagne);padding:1rem 1.4rem;font-family:var(--font-display);font-size:0.85rem;font-style:italic;white-space:nowrap;z-index:2}
+    .story-text .t-heading{color:var(--navy);margin-bottom:1.5rem}
+    .story-text .t-body{color:rgba(15,43,61,0.75);margin-bottom:1.5rem}
+    .story-timeline{margin-top:2.5rem;border-left:1px solid rgba(201,169,110,0.3);padding-left:1.8rem}
+    .timeline-item{margin-bottom:1.8rem;position:relative}
+    .timeline-item::before{content:'';position:absolute;left:-2rem;top:0.35rem;width:8px;height:8px;border-radius:50%;border:1px solid var(--champagne);background:var(--pearl)}
+    .timeline-year{font-size:0.65rem;letter-spacing:0.2em;color:var(--champagne);text-transform:uppercase;margin-bottom:0.2rem}
+    .timeline-desc{font-family:var(--font-display);font-size:1.1rem;font-style:italic;color:var(--navy)}
+    @media(max-width:768px){.story-layout{grid-template-columns:1fr}.story-image-stack{height:320px}.story-img-1{height:240px}.story-img-2{height:170px}.story-float-text{display:none}}
+
+    /* Gallery */
+    #gallery{padding:var(--section-pad) var(--gutter);background:var(--navy-deep);color:var(--white)}
+    .gallery-header{text-align:center;margin-bottom:3rem}
+    .masonry-grid{columns:4;column-gap:10px}
+    @media(max-width:1100px){.masonry-grid{columns:3}}
+    @media(max-width:700px){.masonry-grid{columns:2}}
+    .masonry-item{break-inside:avoid;margin-bottom:10px;overflow:hidden;cursor:pointer;position:relative}
+    .masonry-item img{width:100%;display:block;transition:transform 0.6s var(--ease-luxury),filter 0.4s;filter:brightness(0.9)}
+    .masonry-item:hover img{transform:scale(1.04);filter:brightness(1)}
+    .masonry-overlay{position:absolute;inset:0;background:rgba(15,43,61,0.3);opacity:0;transition:opacity 0.3s;display:flex;align-items:center;justify-content:center}
+    .masonry-item:hover .masonry-overlay{opacity:1}
+    .masonry-overlay svg{color:rgba(255,255,255,0.8);width:28px;height:28px}
+    #lightbox{position:fixed;inset:0;background:rgba(7,25,38,0.97);backdrop-filter:blur(20px);z-index:200;display:none;align-items:center;justify-content:center}
+    #lightbox.open{display:flex}
+    #lightbox-img{max-width:90vw;max-height:88vh;object-fit:contain;box-shadow:0 40px 100px rgba(0,0,0,0.5)}
+    .lb-close{position:absolute;top:1.5rem;right:1.5rem;color:rgba(255,255,255,0.7);font-size:1.8rem;cursor:pointer;transition:color 0.3s;font-family:var(--font-body);font-weight:200}
+    .lb-close:hover{color:var(--champagne)}
+    .lb-nav{position:absolute;top:50%;transform:translateY(-50%);color:rgba(255,255,255,0.5);font-size:2.5rem;cursor:pointer;transition:color 0.3s;padding:1rem;font-family:var(--font-body);font-weight:200}
+    .lb-nav:hover{color:var(--champagne)}
+    .lb-prev{left:1rem}.lb-next{right:1rem}
+    .lb-counter{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);font-size:0.65rem;letter-spacing:0.25em;color:rgba(255,255,255,0.45)}
+
+    /* Flight path */
+    #flight-path{padding:var(--section-pad) var(--gutter);background:var(--navy-deep);color:var(--white);text-align:center;overflow:hidden}
+    .flight-map-wrap{position:relative;max-width:860px;margin:3rem auto 0}
+    #flight-svg{width:100%;height:auto}
+    .flight-city{font-family:var(--font-body);font-size:0.65rem;letter-spacing:0.2em;fill:rgba(255,255,255,0.6)}
+    .flight-city-name{font-family:var(--font-display);font-size:1.1rem;fill:var(--champagne)}
+    .flight-arc{stroke:rgba(201,169,110,0.7);stroke-width:1.5;fill:none;stroke-dasharray:1000;stroke-dashoffset:1000;animation:drawArc 2.8s var(--ease-luxury) 0.5s forwards}
+    .flight-path-dash{stroke:rgba(201,169,110,0.28);stroke-width:1;stroke-dasharray:6 5;fill:none;animation:dashDrift 3s linear infinite}
+    @keyframes drawArc{to{stroke-dashoffset:0}}
+    @keyframes dashDrift{to{stroke-dashoffset:-44}}
+    .flight-dot-tx{fill:var(--champagne)}
+    .flight-dot-hi{fill:var(--ocean-light)}
+    .pulse-ring{fill:none;stroke:var(--champagne);stroke-width:1.5;animation:pulseRing 2s ease-out infinite}
+    .pulse-ring-hi{fill:none;stroke:var(--ocean-light);stroke-width:1.5;animation:pulseRing 2s ease-out 0.3s infinite}
+    @keyframes pulseRing{0%{r:6;opacity:0.8}100%{r:22;opacity:0}}
+
+    /* Travel */
+    #travel{padding:var(--section-pad) var(--gutter);background:linear-gradient(180deg,#0d2436 0%,var(--navy-deep) 100%);color:var(--white)}
+    .travel-header{text-align:center;margin-bottom:4rem}
+    .travel-tabs{display:flex;gap:0;justify-content:center;margin-bottom:3rem;border-bottom:1px solid rgba(201,169,110,0.15);flex-wrap:wrap}
+    .travel-tab{padding:0.9rem 2rem;font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.45);cursor:pointer;transition:color 0.3s;border-bottom:2px solid transparent;margin-bottom:-1px;background:none;font-family:var(--font-body)}
+    .travel-tab.active{color:var(--champagne);border-bottom-color:var(--champagne)}
+    .travel-tab:hover{color:rgba(255,255,255,0.8)}
+    .travel-panel{display:none}
+    .travel-panel.active{display:block;animation:fadePanel 0.5s var(--ease-luxury)}
+    @keyframes fadePanel{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    .travel-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
+    .travel-card{padding:2rem;border:1px solid rgba(201,169,110,0.12);background:rgba(255,255,255,0.03);transition:background 0.3s,border-color 0.3s}
+    .travel-card:hover{background:rgba(201,169,110,0.05);border-color:rgba(201,169,110,0.25)}
+    .tc-icon{color:var(--champagne);margin-bottom:1rem;width:28px;height:28px;opacity:0.8}
+    .tc-title{font-family:var(--font-display);font-size:1.2rem;font-weight:300;margin-bottom:0.5rem}
+    .tc-body{font-size:0.82rem;color:rgba(255,255,255,0.55);line-height:1.7}
+    .tc-badge{display:inline-block;margin-top:0.8rem;padding:0.2rem 0.7rem;background:rgba(201,169,110,0.1);color:var(--champagne);font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase}
+
+    /* Explore */
+    #explore{padding:var(--section-pad) var(--gutter);background:var(--pearl)}
+    .explore-header{text-align:center;margin-bottom:4rem}
+    .explore-categories{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
+    .explore-cat{padding:0.5rem 1.4rem;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;border:1px solid rgba(15,43,61,0.2);color:var(--navy);cursor:pointer;transition:all 0.3s;background:none;font-family:var(--font-body)}
+    .explore-cat.active,.explore-cat:hover{background:var(--navy-deep);color:var(--champagne);border-color:var(--navy-deep)}
+    .explore-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem}
+    .explore-card{position:relative;overflow:hidden;height:360px;cursor:pointer}
+    .explore-card-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 0.7s var(--ease-luxury)}
+    .explore-card:hover .explore-card-bg{transform:scale(1.06)}
+    .explore-card-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(7,25,38,0.88) 100%)}
+    .explore-card-content{position:absolute;bottom:0;left:0;right:0;padding:1.8rem;color:var(--white)}
+    .explore-card-cat{font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--champagne);margin-bottom:0.5rem}
+    .explore-card-title{font-family:var(--font-display);font-size:1.4rem;font-weight:300}
+    .explore-card-desc{font-size:0.8rem;color:rgba(255,255,255,0.65);margin-top:0.4rem;line-height:1.6;max-height:0;overflow:hidden;transition:max-height 0.5s var(--ease-luxury)}
+    .explore-card:hover .explore-card-desc{max-height:80px}
+
+    /* FAQ */
+    #faq{padding:var(--section-pad) var(--gutter);background:var(--navy-deep);color:var(--white)}
+    .faq-header{text-align:center;margin-bottom:4rem}
+    .faq-list{max-width:740px;margin:0 auto}
+    .faq-item{border-bottom:1px solid rgba(201,169,110,0.15)}
+    .faq-q{display:flex;justify-content:space-between;align-items:center;padding:1.6rem 0;cursor:pointer;gap:2rem}
+    .faq-q-text{font-family:var(--font-display);font-size:clamp(1rem,2vw,1.2rem);font-weight:300;line-height:1.4}
+    .faq-icon{flex-shrink:0;width:28px;height:28px;border:1px solid rgba(201,169,110,0.3);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--champagne);transition:transform 0.4s var(--ease-luxury),background 0.3s;font-size:1.2rem}
+    .faq-item.open .faq-icon{transform:rotate(45deg);background:rgba(201,169,110,0.1)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height 0.5s var(--ease-luxury)}
+    .faq-a-inner{padding:0 0 1.6rem;font-size:0.9rem;color:rgba(255,255,255,0.55);line-height:1.8}
+
+    /* Registry */
+    #registry{padding:var(--section-pad) var(--gutter);background:var(--pearl);text-align:center}
+    .registry-inner{max-width:580px;margin:0 auto}
+    .registry-icon{width:64px;height:64px;margin:0 auto 2rem;color:var(--champagne);opacity:0.7}
+    .registry-note{font-family:var(--font-display);font-style:italic;font-size:clamp(1.1rem,2.5vw,1.6rem);color:var(--navy);opacity:0.6;margin:1.5rem 0;line-height:1.5}
+    .registry-sub{font-size:0.8rem;color:rgba(15,43,61,0.5);letter-spacing:0.1em;line-height:1.7}
+
+    /* RSVP */
+    #rsvp{padding:var(--section-pad) var(--gutter);background:linear-gradient(160deg,var(--navy-deep) 0%,#0d2436 100%);color:var(--white)}
+    .rsvp-header{text-align:center;margin-bottom:4rem}
+    .rsvp-form-wrap{max-width:680px;margin:0 auto}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:1.2rem}
+    @media(max-width:560px){.form-row{grid-template-columns:1fr}}
+    .form-group{display:flex;flex-direction:column;margin-bottom:1.2rem}
+    .form-label{font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--champagne);margin-bottom:0.6rem}
+    .form-input,.form-select,.form-textarea{background:rgba(255,255,255,0.04);border:1px solid rgba(201,169,110,0.2);color:var(--white);padding:0.9rem 1.1rem;font-family:var(--font-body);font-size:0.9rem;font-weight:300;outline:none;transition:border-color 0.3s,background 0.3s;width:100%;appearance:none;-webkit-appearance:none}
+    .form-input::placeholder{color:rgba(255,255,255,0.25)}
+    .form-input:focus,.form-select:focus,.form-textarea:focus{border-color:rgba(201,169,110,0.6);background:rgba(255,255,255,0.06)}
+    .form-input.error,.form-select.error{border-color:#e07070}
+    .form-error{font-size:0.72rem;color:#e07070;margin-top:0.3rem;min-height:1rem}
+    .form-select option{background:var(--navy-deep)}
+    .form-textarea{min-height:110px;resize:vertical}
+    .attending-toggle{display:flex;gap:0}
+    .attending-btn{flex:1;padding:0.85rem;border:1px solid rgba(201,169,110,0.2);color:rgba(255,255,255,0.4);font-family:var(--font-body);font-size:0.78rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;background:rgba(255,255,255,0.03)}
+    .attending-btn:first-child{border-right:none}
+    .attending-btn.selected{background:rgba(201,169,110,0.1);border-color:rgba(201,169,110,0.5);color:var(--champagne)}
+    .rsvp-submit-wrap{text-align:center;margin-top:2.5rem}
+    .btn-rsvp{display:inline-flex;align-items:center;justify-content:center;gap:0.8rem;padding:1.1rem 3.5rem;background:transparent;border:1px solid var(--champagne);color:var(--champagne);font-family:var(--font-body);font-size:0.7rem;font-weight:400;letter-spacing:0.3em;text-transform:uppercase;cursor:pointer;transition:color 0.4s;position:relative;overflow:hidden}
+    .btn-rsvp::before{content:'';position:absolute;inset:0;background:var(--champagne);transform:scaleX(0);transform-origin:left;transition:transform 0.4s var(--ease-luxury)}
+    .btn-rsvp:hover::before{transform:scaleX(1)}
+    .btn-rsvp:hover{color:var(--navy-deep)}
+    .btn-rsvp span,.btn-rsvp svg{position:relative;z-index:1}
+    .rsvp-success{text-align:center;padding:3rem;display:none}
+    .rsvp-success.show{display:block;animation:fadePanel 0.6s var(--ease-luxury)}
+    .rsvp-success-icon{font-family:var(--font-display);font-size:3rem;color:var(--champagne);margin-bottom:1rem}
+    .rsvp-success-title{font-family:var(--font-display);font-size:2rem;font-weight:300;margin-bottom:0.5rem}
+    .rsvp-success-sub{font-size:0.85rem;color:rgba(255,255,255,0.5)}
+    .export-wrap{text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(201,169,110,0.1)}
+    .btn-export{display:inline-flex;align-items:center;gap:0.6rem;padding:0.7rem 1.8rem;border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.35);font-family:var(--font-body);font-size:0.62rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;transition:all 0.3s;background:none}
+    .btn-export:hover{border-color:rgba(201,169,110,0.4);color:var(--champagne)}
+
+    /* Footer */
+    #footer{background:var(--navy-deep);color:var(--white);text-align:center;padding:5rem var(--gutter) 3rem;border-top:1px solid rgba(201,169,110,0.1)}
+    .footer-monogram{font-family:var(--font-display);font-size:clamp(2rem,6vw,4rem);font-weight:300;letter-spacing:0.1em;color:var(--champagne);margin-bottom:1rem}
+    .footer-tagline{font-family:var(--font-display);font-style:italic;font-size:1.1rem;color:rgba(255,255,255,0.4);margin-bottom:2rem}
+    .footer-location{font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:0.5rem}
+    .footer-year{font-family:var(--font-display);font-size:0.9rem;color:rgba(255,255,255,0.2);letter-spacing:0.2em}
+    .footer-nav{display:flex;justify-content:center;flex-wrap:wrap;gap:2rem;margin:2.5rem 0}
+    .footer-nav a{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.28);transition:color 0.3s}
+    .footer-nav a:hover{color:var(--champagne)}
+    .footer-copy{font-size:0.62rem;color:rgba(255,255,255,0.15);margin-top:2rem;letter-spacing:0.1em}
+
+    /* Scroll progress */
+    #scroll-bar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--champagne),var(--gold));z-index:1000;width:0%;transition:width 0.1s}
+  </style>
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-monogram">L &amp; R</div>
+    <div class="preloader-line"></div>
+  </div>
+
+  <!-- Scroll progress -->
+  <div id="scroll-bar" role="progressbar" aria-label="Page scroll progress"></div>
+
+  <!-- NAV -->
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-monogram" aria-label="Lauren and Rolando home">L &amp; R</a>
+    <div class="nav-links">
+      <a href="#save-the-date">Save the Date</a>
+      <a href="#story">Our Story</a>
+      <a href="#travel">Travel</a>
+      <a href="#explore">Waikiki</a>
+      <a href="#faq">FAQ</a>
+      <a href="#rsvp" class="nav-rsvp">RSVP</a>
+    </div>
+    <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Mobile navigation" aria-modal="true">
+    <a href="#save-the-date" class="mobile-link">Save the Date</a>
+    <a href="#story" class="mobile-link">Our Story</a>
+    <a href="#gallery" class="mobile-link">Gallery</a>
+    <a href="#travel" class="mobile-link">Travel</a>
+    <a href="#explore" class="mobile-link">Waikiki</a>
+    <a href="#faq" class="mobile-link">FAQ</a>
+    <a href="#rsvp" class="mobile-link">RSVP</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero" aria-label="Hero — Lauren and Rolando's Wedding">
+    <div class="hero-slides" aria-hidden="true">
+      <div class="hero-slide active"></div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+      <div class="hero-slide"></div>
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Aloha From Paradise</p>
+      <h1 class="hero-title">Waikiki<br><em>Awaits</em></h1>
+      <p class="hero-names">Lauren Rodriguez <span class="hero-amp">&amp;</span> Rolando Salazar</p>
+      <p class="hero-sub">Join us in Waikiki, Hawaii &nbsp;·&nbsp; 2027</p>
+      <div class="hero-cta">
+        <a href="#save-the-date" class="btn-primary" aria-label="Scroll to save the date">
+          <span>Enter Experience</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <div class="scroll-mouse"></div>
+      <span>Scroll</span>
+    </div>
+    <div class="hero-dots" aria-hidden="true" id="hero-dots">
+      <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+      <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+      <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+      <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
+    </div>
+  </section>
+
+  <!-- SAVE THE DATE -->
+  <section id="save-the-date" aria-label="Save the Date">
+    <div class="std-bg-pattern" aria-hidden="true"></div>
+    <div class="std-inner container container--narrow">
+      <p class="t-eyebrow reveal">Save the Date</p>
+      <div class="divider-ornament reveal reveal-delay-1" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--champagne)" opacity="0.7"><path d="M12 2L8 8H2l5 4-2 7 7-5 7 5-2-7 5-4h-6z"/></svg>
+      </div>
+      <h2 class="t-heading reveal reveal-delay-1">Lauren <em>&amp;</em> Rolando</h2>
+      <p class="std-location reveal reveal-delay-2">Waikiki · Oahu, Hawaii</p>
+      <div class="std-year reveal reveal-delay-2" aria-label="Coming 2027">2027</div>
+      <p class="std-announcement reveal reveal-delay-3">Official date announcement coming soon.</p>
+      <div class="countdown-placeholder reveal reveal-delay-4" role="status" aria-label="Countdown — date to be announced">
+        <div class="countdown-unit"><span class="countdown-num">—</span><span class="countdown-label">Days</span></div>
+        <span class="countdown-sep">·</span>
+        <div class="countdown-unit"><span class="countdown-num">—</span><span class="countdown-label">Hours</span></div>
+        <span class="countdown-sep">·</span>
+        <div class="countdown-unit"><span class="countdown-num">—</span><span class="countdown-label">Minutes</span></div>
+        <span class="countdown-sep">·</span>
+        <div class="countdown-unit"><span class="countdown-num">—</span><span class="countdown-label">Seconds</span></div>
+      </div>
+      <p class="countdown-note reveal">Countdown begins when the date is announced</p>
+    </div>
+  </section>
+
+  <!-- Wave break -->
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#071926"/>
+    </svg>
+  </div>
+
+  <!-- DETAILS -->
+  <section id="details" aria-label="Wedding Details">
+    <div class="container">
+      <p class="t-eyebrow reveal" style="text-align:center">The Celebration</p>
+      <h2 class="t-heading reveal reveal-delay-1" style="text-align:center;color:var(--white);margin-top:0.8rem">Wedding Details</h2>
+      <p class="reveal reveal-delay-2" style="text-align:center;font-family:var(--font-display);font-style:italic;font-size:clamp(1rem,2vw,1.4rem);color:rgba(255,255,255,0.4);margin-top:0.8rem">Full details revealed with the official date announcement.</p>
+      <div class="details-grid reveal reveal-delay-3">
+        <div class="detail-card">
+          <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <p class="detail-title">Venue</p>
+          <p class="detail-value">Waikiki, Hawaii</p>
+          <p class="detail-sub">Oahu, United States</p>
+          <span class="coming-soon-badge">Details Coming Soon</span>
+        </div>
+        <div class="detail-card">
+          <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <p class="detail-title">Ceremony</p>
+          <p class="detail-value">2027</p>
+          <p class="detail-sub">Time to be announced</p>
+          <span class="coming-soon-badge">Details Coming Soon</span>
+        </div>
+        <div class="detail-card">
+          <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          <p class="detail-title">Reception</p>
+          <p class="detail-value">Paradise Awaits</p>
+          <p class="detail-sub">Location to be announced</p>
+          <span class="coming-soon-badge">Details Coming Soon</span>
+        </div>
+        <div class="detail-card">
+          <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <p class="detail-title">Schedule</p>
+          <p class="detail-value">Full Weekend</p>
+          <p class="detail-sub">Event schedule coming soon</p>
+          <span class="coming-soon-badge">Details Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="story" aria-label="Our Story">
+    <div class="container">
+      <div class="story-layout">
+        <div class="story-image-stack reveal">
+          <!-- SWAP: replace .story-img-1 and .story-img-2 background-image in CSS above -->
+          <div class="story-img story-img-1" role="img" aria-label="Lauren and Rolando — engagement photo"></div>
+          <div class="story-img story-img-2" role="img" aria-label="Lauren and Rolando — couple photo"></div>
+          <div class="story-float-text" aria-hidden="true">Together since forever</div>
+        </div>
+        <div class="story-text">
+          <p class="t-eyebrow reveal">Our Story</p>
+          <h2 class="t-heading reveal reveal-delay-1">Two Hearts,<br>One Paradise</h2>
+          <p class="t-body reveal reveal-delay-2">Some love stories are written in quiet moments — a laugh shared across a crowded room, a conversation that stretched until sunrise, a hand reached for without thinking twice. Lauren and Rolando's is one of those stories.</p>
+          <p class="t-body reveal reveal-delay-3" style="color:rgba(15,43,61,0.5);font-style:italic">Replace this with your own story. Tell them how you met, how he proposed, and why Hawaii felt like the only place in the world worthy of this moment.</p>
+          <div class="story-timeline reveal reveal-delay-3">
+            <div class="timeline-item">
+              <p class="timeline-year">How We Met</p>
+              <p class="timeline-desc">Your story begins here — replace with your own.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-year">The Proposal</p>
+              <p class="timeline-desc">He asked, she said yes — tell them how it happened.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-year">Coming 2027</p>
+              <p class="timeline-desc">We say "I do" surrounded by the people we love most.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLIGHT PATH -->
+  <section id="flight-path" aria-label="Flight path from Texas to Hawaii">
+    <div class="container">
+      <p class="t-eyebrow reveal" style="color:var(--champagne);text-align:center">The Journey</p>
+      <h2 class="t-heading reveal reveal-delay-1" style="text-align:center;color:var(--white);margin-top:0.8rem">Texas <span style="color:var(--champagne)">&rarr;</span> Hawaii</h2>
+      <p class="reveal reveal-delay-2" style="text-align:center;color:rgba(255,255,255,0.4);font-size:0.85rem;margin-top:0.6rem;letter-spacing:0.1em">Approximately 3,800 miles of open Pacific</p>
+      <div class="flight-map-wrap reveal reveal-delay-2">
+        <svg id="flight-svg" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated flight route from Texas to Hawaii">
+          <defs>
+            <radialGradient id="glow-tx" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#C9A96E" stop-opacity="0.2"/><stop offset="100%" stop-color="#C9A96E" stop-opacity="0"/></radialGradient>
+            <radialGradient id="glow-hi" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#4A9BB8" stop-opacity="0.25"/><stop offset="100%" stop-color="#4A9BB8" stop-opacity="0"/></radialGradient>
+          </defs>
+          <circle cx="160" cy="195" r="65" fill="url(#glow-tx)"/>
+          <circle cx="640" cy="120" r="80" fill="url(#glow-hi)"/>
+          <!-- Distance label -->
+          <text x="400" y="68" class="flight-city" text-anchor="middle" font-size="10">≈ 3,800 miles · ~9 hours nonstop</text>
+          <!-- Dashed background arc -->
+          <path class="flight-path-dash" d="M160,195 Q400,30 640,120"/>
+          <!-- Animated arc -->
+          <path class="flight-arc" id="main-arc" d="M160,195 Q400,30 640,120"/>
+          <!-- Texas marker -->
+          <circle class="pulse-ring" cx="160" cy="195" r="6"/>
+          <circle class="pulse-ring" cx="160" cy="195" r="6" style="animation-delay:0.6s"/>
+          <circle cx="160" cy="195" r="6" fill="var(--champagne)"/>
+          <!-- Hawaii marker -->
+          <circle class="pulse-ring-hi" cx="640" cy="120" r="6"/>
+          <circle class="pulse-ring-hi" cx="640" cy="120" r="6" style="animation-delay:0.6s"/>
+          <circle cx="640" cy="120" r="6" fill="var(--ocean-light)"/>
+          <!-- Labels -->
+          <text x="160" y="220" class="flight-city" text-anchor="middle">TEXAS</text>
+          <text x="160" y="238" class="flight-city-name" text-anchor="middle">Dallas · Houston</text>
+          <text x="640" y="148" class="flight-city" text-anchor="middle">HAWAII</text>
+          <text x="640" y="166" class="flight-city-name" text-anchor="middle">Waikiki, Oahu</text>
+          <!-- Plane animated along arc -->
+          <g id="plane-g" aria-hidden="true">
+            <path d="M-9,0 L7,-4 L8,0 L7,4 Z M-1,0 L-9,-5 L-7,0 L-9,5 Z" fill="var(--champagne)" opacity="0.95" transform="scale(1.2)"/>
+            <animateMotion dur="5s" repeatCount="indefinite" rotate="auto" keyPoints="0;0;1;1" keyTimes="0;0.05;0.9;1" calcMode="spline" keySplines="0 0 1 1;0.4 0 0.2 1;0 0 1 1">
+              <mpath href="#main-arc"/>
+            </animateMotion>
+          </g>
+        </svg>
+      </div>
+      <div class="reveal" style="text-align:center;margin-top:3rem;display:flex;justify-content:center;gap:3rem;flex-wrap:wrap">
+        <div style="text-align:center">
+          <p style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--champagne);margin-bottom:0.3rem">Departure</p>
+          <p style="font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--white)">Texas</p>
+        </div>
+        <div style="color:rgba(201,169,110,0.4);font-size:2rem;font-family:var(--font-display);align-self:center">✈</div>
+        <div style="text-align:center">
+          <p style="font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--ocean-light);margin-bottom:0.3rem">Destination</p>
+          <p style="font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--white)">Waikiki, Hawaii</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" aria-label="Photo Gallery">
+    <div class="gallery-header container">
+      <p class="t-eyebrow reveal" style="color:var(--champagne)">Our Photos</p>
+      <h2 class="t-heading reveal reveal-delay-1" style="color:var(--white);margin-top:0.8rem">Gallery</h2>
+      <p class="reveal reveal-delay-2" style="color:rgba(255,255,255,0.4);font-size:0.85rem;margin-top:0.6rem">Photos will be added as the wedding approaches — replace the image array in the JavaScript below.</p>
+    </div>
+    <div class="container"><div class="masonry-grid" id="masonry-grid" role="list" aria-label="Wedding photo gallery"></div></div>
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+      <button class="lb-close" aria-label="Close photo viewer">&#x2715;</button>
+      <button class="lb-nav lb-prev" aria-label="Previous photo">&#x2039;</button>
+      <img id="lightbox-img" src="" alt="Gallery photo"/>
+      <button class="lb-nav lb-next" aria-label="Next photo">&#x203a;</button>
+      <div class="lb-counter" id="lb-counter" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- OCEAN WAVES DIVIDER -->
+  <div class="ocean-section" aria-hidden="true">
+    <div class="animated-waves">
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,30 C180,60 360,0 540,30 C720,60 900,0 1080,30 C1260,60 1350,20 1440,30 L1440,80 L0,80 Z" fill="rgba(44,110,138,0.25)"/>
+      </svg>
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,40 C240,10 480,70 720,40 C960,10 1200,70 1440,40 L1440,80 L0,80 Z" fill="rgba(44,110,138,0.15)"/>
+      </svg>
+      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,50 C200,20 400,80 600,50 C800,20 1000,80 1200,50 C1320,30 1400,55 1440,50 L1440,80 L0,80 Z" fill="rgba(44,110,138,0.1)"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- TRAVEL -->
+  <section id="travel" aria-label="Travel Information">
+    <div class="container">
+      <div class="travel-header">
+        <p class="t-eyebrow reveal" style="color:var(--champagne)">Getting There</p>
+        <h2 class="t-heading reveal reveal-delay-1" style="color:var(--white);margin-top:0.8rem">Travel Information</h2>
+        <p class="reveal reveal-delay-2" style="color:rgba(255,255,255,0.4);font-size:0.85rem;margin-top:0.8rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.7">We want your journey to feel effortless. Below is guidance to help you plan.<br><em style="font-size:0.78rem;color:rgba(255,255,255,0.25)">Hotel and airline names are examples — always compare rates.</em></p>
+      </div>
+      <div class="travel-tabs" role="tablist">
+        <button class="travel-tab active" role="tab" aria-selected="true" data-panel="flights">Flights</button>
+        <button class="travel-tab" role="tab" aria-selected="false" data-panel="hotels">Hotels</button>
+        <button class="travel-tab" role="tab" aria-selected="false" data-panel="transport">Transport</button>
+        <button class="travel-tab" role="tab" aria-selected="false" data-panel="tips">Tips</button>
+      </div>
+      <div id="panel-flights" class="travel-panel active" role="tabpanel">
+        <div class="travel-cards">
+          <div class="travel-card reveal">
+            <svg class="tc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012.86 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            <p class="tc-title">Nearest Airport</p>
+            <p class="tc-body">Fly into <strong style="color:rgba(255,255,255,0.85)">Honolulu International (HNL)</strong> — the primary gateway to Oahu, just minutes from Waikiki. Most major U.S. cities offer direct or one-stop service.</p>
+            <span class="tc-badge">Primary Airport</span>
+          </div>
+          <div class="travel-card reveal reveal-delay-1">
+            <svg class="tc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <p class="tc-title">From Texas</p>
+            <p class="tc-body">Direct flights from Dallas/Fort Worth (DFW) and Houston (IAH) to Honolulu run 8–10 hours. Hawaiian Airlines, American, and United offer regular service. Book early — Hawaii routes fill quickly.</p>
+            <span class="tc-badge">Example Guidance</span>
+          </div>
+          <div class="travel-card reveal reveal-delay-2">
+            <svg class="tc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <p class="tc-title">Book Early</p>
+            <p class="tc-body">Hawaii flights during popular travel windows can sell out or spike in price. We recommend booking 6–9 months ahead. Specific travel dates will be shared with the official date announcement.</p>
+            <span class="tc-badge">Tip</span>
+          </div>
+        </div>
+      </div>
+      <div id="panel-hotels" class="travel-panel" role="tabpanel">
+        <div class="travel-cards">
+          <div class="travel-card reveal">
+            <svg class="tc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            <p class="tc-title">Luxury Tier</p>
+            <p class="tc-body">The Royal Hawaiian, Moana Surfrider, and Halekulani offer iconic Waikiki experiences with world-class service. Expect $400–$900+ per night. These iconic properties book well in advance.</p>
+            <span class="tc-badge">Example Options</span>
+          </div>
+          <div class="travel-card reveal reveal-delay-1">
+            <svg class="tc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <p class="tc-title">Mid-Range</p>
+            <p class="tc-body">Waikiki Beach Marriott, Hilton Hawaiian Village, and Hyatt Regency Waikiki offer great amenities for $200–$400/night — all within easy walking distance of main attractions.</p>
+            <span class="tc-badge">Example Options</span>
+          </div>
+          <div class="travel-card reveal reveal-delay-2">
+            <svg class="tc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            <p class="tc-title">Group Block</p>
+            <p class="tc-body">We are exploring a hotel room block for guests at preferred rates. Details will be announced with the official date. Check back here for booking links when available.</p>
+            <span class="tc-badge">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+      <div id="panel-transport" class="travel-panel" role="tabpanel">
+        <div class="travel-cards">
+          <div class="travel-card reveal">
+            <svg class="tc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <p class="tc-title">Airport to Waikiki</p>
+            <p class="tc-body">HNL is 20–30 minutes from Waikiki. Rideshare (Uber/Lyft), taxis, and TheBus public transit all serve the route. Rental cars aren't necessary for Waikiki-based guests.</p>
+            <span class="tc-badge">Info</span>
+          </div>
+          <div class="travel-card reveal reveal-delay-1">
+            <svg class="tc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            <p class="tc-title">Getting Around</p>
+            <p class="tc-body">Waikiki is highly walkable — most restaurants, beaches, and attractions are within 10 minutes on foot. For Diamond Head, Hanauma Bay, and North Shore, rideshare is easy and affordable.</p>
+            <span class="tc-badge">Tip</span>
+          </div>
+          <div class="travel-card reveal reveal-delay-2">
+            <svg class="tc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+            <p class="tc-title">Wedding Transport</p>
+            <p class="tc-body">Transportation details for wedding events will be shared with the full schedule. We'll ensure every guest can travel between venues comfortably. More information coming soon.</p>
+            <span class="tc-badge">Coming Soon</span>
+          </div>
+        </div>
+      </div>
+      <div id="panel-tips" class="travel-panel" role="tabpanel">
+        <div class="travel-cards">
+          <div class="travel-card reveal">
+            <svg class="tc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+            <p class="tc-title">Hawaii Time</p>
+            <p class="tc-body">Hawaii Standard Time (HST) is UTC−10 and does not observe Daylight Saving. Plan accordingly — arriving a day or two early helps with adjustment. Most guests from Texas will be 5–6 hours behind.</p>
+            <span class="tc-badge">Tip</span>
+          </div>
+          <div class="travel-card reveal reveal-delay-1">
+            <svg class="tc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <p class="tc-title">What to Pack</p>
+            <p class="tc-body">Hawaii runs mid-70s to mid-80s°F year-round. Pack light breathable clothing, swimwear, reef-safe sunscreen, and comfortable walking shoes. A light jacket is useful for evenings or air-conditioned venues.</p>
+            <span class="tc-badge">Packing Tip</span>
+          </div>
+          <div class="travel-card reveal reveal-delay-2">
+            <svg class="tc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            <p class="tc-title">Make It a Trip</p>
+            <p class="tc-body">Hawaii deserves more than a weekend. Consider arriving early or staying after. Diamond Head, Hanauma Bay snorkeling, North Shore surf, and the Polynesian Cultural Center are unforgettable.</p>
+            <span class="tc-badge">Recommended</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPLORE WAIKIKI -->
+  <section id="explore" aria-label="Explore Waikiki">
+    <div class="container">
+      <div class="explore-header">
+        <p class="t-eyebrow reveal">The Destination</p>
+        <h2 class="t-heading reveal reveal-delay-1" style="margin-top:0.8rem">Explore Waikiki</h2>
+        <p class="t-subheading reveal reveal-delay-2" style="color:rgba(15,43,61,0.5);margin-top:0.8rem">Your guide to paradise</p>
+      </div>
+      <div class="explore-categories" role="group" aria-label="Filter by category">
+        <button class="explore-cat active" data-cat="all">All</button>
+        <button class="explore-cat" data-cat="beach">Beaches</button>
+        <button class="explore-cat" data-cat="activity">Activities</button>
+        <button class="explore-cat" data-cat="dining">Dining</button>
+        <button class="explore-cat" data-cat="scenic">Scenic</button>
+        <button class="explore-cat" data-cat="family">Family</button>
+      </div>
+      <div class="explore-grid" id="explore-grid">
+        <div class="explore-card reveal" data-cat="beach">
+          <div class="explore-card-bg" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=75')" role="img" aria-label="Waikiki Beach"></div>
+          <div class="explore-card-overlay"></div>
+          <div class="explore-card-content">
+            <p class="explore-card-cat">Beach</p>
+            <h3 class="explore-card-title">Waikiki Beach</h3>
+            <p class="explore-card-desc">The iconic stretch of golden sand with Diamond Head as its backdrop. Perfect for swimming, surf lessons, and golden hour walks.</p>
+          </div>
+        </div>
+        <div class="explore-card reveal reveal-delay-1" data-cat="scenic">
+          <div class="explore-card-bg" style="background-image:url('https://images.unsplash.com/photo-1542259009477-d625272157b7?w=700&q=75')" role="img" aria-label="Diamond Head crater"></div>
+          <div class="explore-card-overlay"></div>
+          <div class="explore-card-content">
+            <p class="explore-card-cat">Scenic</p>
+            <h3 class="explore-card-title">Diamond Head</h3>
+            <p class="explore-card-desc">Hike the iconic volcanic crater for panoramic views of Honolulu. Arrive early for cooler temps and fewer crowds.</p>
+          </div>
+        </div>
+        <div class="explore-card reveal reveal-delay-2" data-cat="activity">
+          <div class="explore-card-bg" style="background-image:url('https://images.unsplash.com/photo-1505228395891-9a51e7e86bf6?w=700&q=75')" role="img" aria-label="Snorkeling Hawaii"></div>
+          <div class="explore-card-overlay"></div>
+          <div class="explore-card-content">
+            <p class="explore-card-cat">Activity</p>
+            <h3 class="explore-card-title">Hanauma Bay</h3>
+            <p class="explore-card-desc">A protected marine sanctuary 20 minutes from Waikiki. Snorkel among hundreds of tropical fish above ancient coral.</p>
+          </div>
+        </div>
+        <div class="explore-card reveal" data-cat="dining">
+          <div class="explore-card-bg" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=75')" role="img" aria-label="Fine dining"></div>
+          <div class="explore-card-overlay"></div>
+          <div class="explore-card-content">
+            <p class="explore-card-cat">Dining</p>
+            <h3 class="explore-card-title">Ocean-View Dining</h3>
+            <p class="explore-card-desc">From fresh poke bowls and Hawaiian plate lunches to Michelin-recognized fine dining overlooking the sunset.</p>
+          </div>
+        </div>
+        <div class="explore-card reveal reveal-delay-1" data-cat="activity">
+          <div class="explore-card-bg" style="background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=75')" role="img" aria-label="Surfing"></div>
+          <div class="explore-card-overlay"></div>
+          <div class="explore-card-content">
+            <p class="explore-card-cat">Activity</p>
+            <h3 class="explore-card-title">Surf Lessons</h3>
+            <p class="explore-card-desc">Waikiki's gentle rolling waves have been the perfect learning ground for over a century. Certified instructors available for all levels.</p>
+          </div>
+        </div>
+        <div class="explore-card reveal reveal-delay-2" data-cat="family">
+          <div class="explore-card-bg" style="background-image:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=700&q=75')" role="img" aria-label="Polynesian Cultural Center"></div>
+          <div class="explore-card-overlay"></div>
+          <div class="explore-card-content">
+            <p class="explore-card-cat">Family</p>
+            <h3 class="explore-card-title">Polynesian Cultural Center</h3>
+            <p class="explore-card-desc">An immersive journey through the cultures of Polynesia — excellent for families and first-time Hawaii visitors.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" aria-label="Frequently Asked Questions">
+    <div class="container">
+      <div class="faq-header">
+        <p class="t-eyebrow reveal" style="color:var(--champagne)">Questions</p>
+        <h2 class="t-heading reveal reveal-delay-1" style="color:var(--white);margin-top:0.8rem">Frequently Asked</h2>
+      </div>
+      <div class="faq-list reveal reveal-delay-2">
+        <div class="faq-item"><div class="faq-q" role="button" tabindex="0" aria-expanded="false"><span class="faq-q-text">What airport should I fly into?</span><div class="faq-icon" aria-hidden="true">+</div></div><div class="faq-a"><p class="faq-a-inner">Fly into <strong>Honolulu International Airport (HNL)</strong>, the primary airport for Oahu — approximately 20–30 minutes from Waikiki. There is no need to fly into Kona or Maui.</p></div></div>
+        <div class="faq-item"><div class="faq-q" role="button" tabindex="0" aria-expanded="false"><span class="faq-q-text">Where should I stay?</span><div class="faq-icon" aria-hidden="true">+</div></div><div class="faq-a"><p class="faq-a-inner">Staying in Waikiki is ideal — you'll be close to the venue and the island's best experiences. We are exploring a hotel block at preferred rates. Details will follow the date announcement.</p></div></div>
+        <div class="faq-item"><div class="faq-q" role="button" tabindex="0" aria-expanded="false"><span class="faq-q-text">Will transportation between venues be provided?</span><div class="faq-icon" aria-hidden="true">+</div></div><div class="faq-a"><p class="faq-a-inner">Transportation details will be confirmed with the full event schedule. We're committed to ensuring every guest can move comfortably between venues.</p></div></div>
+        <div class="faq-item"><div class="faq-q" role="button" tabindex="0" aria-expanded="false"><span class="faq-q-text">What is the dress code?</span><div class="faq-icon" aria-hidden="true">+</div></div><div class="faq-a"><p class="faq-a-inner">The dress code will be in the formal invitation. For a Waikiki destination wedding, anticipate a <strong>tropical formal</strong> or <strong>beach elegant</strong> aesthetic — flowing evening wear, linen suits, refined resort attire.</p></div></div>
+        <div class="faq-item"><div class="faq-q" role="button" tabindex="0" aria-expanded="false"><span class="faq-q-text">Is this a kid-friendly wedding?</span><div class="faq-icon" aria-hidden="true">+</div></div><div class="faq-a"><p class="faq-a-inner">Details about our guest policy will be in the formal invitation. We'll communicate this well in advance so families can plan accordingly.</p></div></div>
+        <div class="faq-item"><div class="faq-q" role="button" tabindex="0" aria-expanded="false"><span class="faq-q-text">When should I book flights and hotels?</span><div class="faq-icon" aria-hidden="true">+</div></div><div class="faq-a"><p class="faq-a-inner">As soon as the date is announced, we recommend booking quickly. Hawaii is an extremely popular destination and rates rise significantly. We'll give as much advance notice as possible.</p></div></div>
+        <div class="faq-item"><div class="faq-q" role="button" tabindex="0" aria-expanded="false"><span class="faq-q-text">More questions?</span><div class="faq-icon" aria-hidden="true">+</div></div><div class="faq-a"><p class="faq-a-inner">More will be added as details are finalized. Use the RSVP notes field to send a question, or reach out to Lauren or Rolando directly. We'll update this section as the date approaches.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGISTRY -->
+  <section id="registry" aria-label="Registry">
+    <div class="container">
+      <div class="registry-inner">
+        <div class="registry-icon reveal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+        <p class="t-eyebrow reveal">Wedding Registry</p>
+        <h2 class="t-heading reveal reveal-delay-1" style="margin-top:0.8rem;color:var(--navy)">Registry</h2>
+        <p class="registry-note reveal reveal-delay-2">"Your presence at our celebration is the greatest gift of all."</p>
+        <p class="registry-sub reveal reveal-delay-3">Registry information will be shared closer to the wedding date.<br>Check back here for links and details.</p>
+        <span class="coming-soon-badge reveal reveal-delay-4" style="background:transparent;border-color:rgba(15,43,61,0.2);color:var(--navy);display:inline-block;margin-top:2rem">Registry Details Coming Soon</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section id="rsvp" aria-label="RSVP">
+    <div class="container">
+      <div class="rsvp-header">
+        <p class="t-eyebrow reveal" style="color:var(--champagne)">You're Invited</p>
+        <h2 class="t-heading reveal reveal-delay-1" style="color:var(--white);margin-top:0.8rem">RSVP</h2>
+        <p class="reveal reveal-delay-2" style="color:rgba(255,255,255,0.4);font-size:0.85rem;margin-top:0.8rem">Let us know you'll be celebrating with us in paradise.</p>
+      </div>
+      <div class="rsvp-form-wrap">
+        <form id="rsvp-form" class="reveal reveal-delay-2" novalidate aria-label="RSVP form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="rsvp-first">First Name *</label>
+              <input type="text" id="rsvp-first" name="firstName" class="form-input" placeholder="Lauren" autocomplete="given-name" required aria-required="true"/>
+              <span class="form-error" id="err-first" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="rsvp-last">Last Name *</label>
+              <input type="text" id="rsvp-last" name="lastName" class="form-input" placeholder="Rodriguez" autocomplete="family-name" required aria-required="true"/>
+              <span class="form-error" id="err-last" role="alert"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Attending *</label>
+            <div class="attending-toggle" role="group" aria-label="Will you attend?">
+              <button type="button" class="attending-btn selected" data-value="yes" aria-pressed="true">Joyfully Accepts</button>
+              <button type="button" class="attending-btn" data-value="no" aria-pressed="false">Regretfully Declines</button>
+            </div>
+            <input type="hidden" id="rsvp-attending" name="attending" value="yes"/>
+          </div>
+          <div class="form-row" id="guest-fields">
+            <div class="form-group">
+              <label class="form-label" for="rsvp-guests">Number of Guests</label>
+              <select id="rsvp-guests" name="guestCount" class="form-select">
+                <option value="1">1 — Just Me</option>
+                <option value="2" selected>2 — Plus One</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5+</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="rsvp-plusone">Plus One Name</label>
+              <input type="text" id="rsvp-plusone" name="plusOneName" class="form-input" placeholder="Guest's name" autocomplete="off"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="rsvp-notes">Message or Dietary Notes</label>
+            <textarea id="rsvp-notes" name="notes" class="form-textarea" placeholder="Share a message, dietary restrictions, or any questions for the couple..."></textarea>
+          </div>
+          <div class="rsvp-submit-wrap">
+            <button type="submit" class="btn-rsvp">
+              <span>Send RSVP</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9z"/></svg>
+            </button>
+          </div>
+        </form>
+        <div class="rsvp-success" id="rsvp-success" role="alert" aria-live="polite">
+          <div class="rsvp-success-icon">✦</div>
+          <h3 class="rsvp-success-title">Mahalo!</h3>
+          <p class="rsvp-success-sub">We've received your RSVP and cannot wait to celebrate with you in Hawaii.</p>
+        </div>
+        <div class="export-wrap">
+          <button class="btn-export" id="export-btn" aria-label="Export all RSVP responses as CSV">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Export RSVP Data (CSV)
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <p class="footer-monogram">L &amp; R</p>
+      <p class="footer-tagline">Aloha From Paradise</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#save-the-date">Save the Date</a>
+        <a href="#story">Our Story</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#travel">Travel</a>
+        <a href="#explore">Waikiki</a>
+        <a href="#faq">FAQ</a>
+        <a href="#rsvp">RSVP</a>
+      </nav>
+      <div class="divider-ornament" style="color:rgba(201,169,110,0.2)" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="rgba(201,169,110,0.5)"><path d="M12 2L8 8H2l5 4-2 7 7-5 7 5-2-7 5-4h-6z"/></svg>
+      </div>
+      <p class="footer-location">Waikiki · Oahu, Hawaii</p>
+      <p class="footer-year">Lauren Rodriguez &amp; Rolando Salazar · 2027</p>
+      <p class="footer-copy">Made with love for a destination to remember.</p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT — All Interactions & Animations
+  ============================================================ -->
+  <script>
+  /* ─── UTILITIES ─────────────────────────────────────────────── */
+  const qs  = (sel, ctx = document) => ctx.querySelector(sel);
+  const qsa = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+
+  /* ─── PRELOADER ──────────────────────────────────────────────── */
+  window.addEventListener('load', () => {
+    const pre = qs('#preloader');
+    if (!pre) return;
+    setTimeout(() => {
+      pre.style.opacity = '0';
+      pre.style.transition = 'opacity 0.8s ease';
+      setTimeout(() => { pre.style.display = 'none'; }, 800);
+    }, 600);
+  });
+
+  /* ─── SCROLL PROGRESS BAR ─────────────────────────────────────── */
+  const progressBar = qs('#scroll-progress');
+  function updateProgress() {
+    if (!progressBar) return;
+    const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    progressBar.style.width = Math.min(pct, 100) + '%';
+  }
+
+  /* ─── NAV SCROLL BEHAVIOR ─────────────────────────────────────── */
+  const nav = qs('#main-nav');
+  let lastScroll = 0;
+  function handleNavScroll() {
+    const cur = window.scrollY;
+    if (!nav) return;
+    if (cur > 80) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+    // hide on scroll down, show on scroll up
+    if (cur > 300) {
+      if (cur > lastScroll + 5) {
+        nav.style.transform = 'translateY(-100%)';
+      } else if (cur < lastScroll - 5) {
+        nav.style.transform = 'translateY(0)';
+      }
+    } else {
+      nav.style.transform = 'translateY(0)';
+    }
+    lastScroll = cur;
+  }
+
+  /* ─── HAMBURGER / MOBILE NAV ─────────────────────────────────── */
+  const hamburger = qs('#hamburger');
+  const mobileNav = qs('#nav-mobile');
+  if (hamburger && mobileNav) {
+    hamburger.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
+      hamburger.classList.toggle('active', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+    qsa('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', false);
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  /* ─── HERO SLIDESHOW ─────────────────────────────────────────── */
+  // IMAGE REPLACEMENT: Edit the src values in these objects to use your own photos
+  const HERO_SLIDES = [
+    { src: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=85', alt: 'Waikiki beach at sunset' },
+    { src: 'https://images.unsplash.com/photo-1542259009477-d625272157b7?w=1920&q=85', alt: 'Hawaiian ocean panorama' },
+    { src: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1920&q=85', alt: 'Tropical paradise' },
+    { src: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1920&q=85', alt: 'Oahu coastline' },
+  ];
+
+  (function initHero() {
+    const track   = qs('#hero-track');
+    const dotsWrap = qs('#hero-dots');
+    if (!track) return;
+
+    // Build slides
+    HERO_SLIDES.forEach((img, i) => {
+      const slide = document.createElement('div');
+      slide.className = 'hero-slide' + (i === 0 ? ' active' : '');
+      slide.style.backgroundImage = `url('${img.src}')`;
+      slide.setAttribute('aria-label', img.alt);
+      track.appendChild(slide);
+    });
+
+    // Build dots
+    if (dotsWrap) {
+      HERO_SLIDES.forEach((_, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'hero-dot' + (i === 0 ? ' active' : '');
+        btn.setAttribute('aria-label', `Slide ${i + 1}`);
+        btn.addEventListener('click', () => goTo(i));
+        dotsWrap.appendChild(btn);
+      });
+    }
+
+    let current = 0;
+    let timer;
+
+    function goTo(idx) {
+      const slides = qsa('.hero-slide', track);
+      const dots   = qsa('.hero-dot', dotsWrap || document);
+      slides[current]?.classList.remove('active');
+      dots[current]?.classList.remove('active');
+      current = (idx + HERO_SLIDES.length) % HERO_SLIDES.length;
+      slides[current]?.classList.add('active');
+      dots[current]?.classList.add('active');
+    }
+
+    function advance() { goTo(current + 1); }
+    function startTimer() { timer = setInterval(advance, 6000); }
+    function resetTimer()  { clearInterval(timer); startTimer(); }
+
+    startTimer();
+
+    // Pause on hover
+    const heroEl = qs('#hero');
+    if (heroEl) {
+      heroEl.addEventListener('mouseenter', () => clearInterval(timer));
+      heroEl.addEventListener('mouseleave', startTimer);
+    }
+
+    // Swipe support
+    let touchStartX = 0;
+    track.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 50) { goTo(dx < 0 ? current + 1 : current - 1); resetTimer(); }
+    });
+
+    // Preload images
+    HERO_SLIDES.forEach(img => { const i = new Image(); i.src = img.src; });
+  })();
+
+  /* ─── SCROLL REVEAL (IntersectionObserver) ─────────────────────── */
+  (function initReveal() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    qsa('.reveal').forEach(el => observer.observe(el));
+  })();
+
+  /* ─── SUNSET / ATMOSPHERE SCROLL EFFECT ─────────────────────── */
+  (function initSunset() {
+    const body = document.body;
+    const palettes = [
+      // [progress, overlay-color, warmth]
+      [0,    'rgba(255,160,60,0.04)',  1.0],
+      [0.15, 'rgba(255,130,40,0.06)',  0.95],
+      [0.35, 'rgba(220,140,60,0.05)',  0.9],
+      [0.55, 'rgba(100,100,160,0.04)', 0.85],
+      [0.75, 'rgba(40,60,120,0.06)',   0.8],
+      [1.0,  'rgba(15,30,60,0.08)',    0.75],
+    ];
+
+    let atmoEl = qs('#atmosphere-overlay');
+    if (!atmoEl) {
+      atmoEl = document.createElement('div');
+      atmoEl.id = 'atmosphere-overlay';
+      atmoEl.style.cssText = 'position:fixed;inset:0;pointer-events:none;z-index:1;transition:background 1.2s ease;';
+      document.body.prepend(atmoEl);
+    }
+
+    function lerp(a, b, t) { return a + (b - a) * t; }
+    function interpColor(progress) {
+      for (let i = 0; i < palettes.length - 1; i++) {
+        const [p0, c0] = palettes[i];
+        const [p1, c1] = palettes[i + 1];
+        if (progress >= p0 && progress <= p1) {
+          const t = (progress - p0) / (p1 - p0);
+          // Just return the closer palette color for simplicity
+          return t < 0.5 ? c0 : c1;
+        }
+      }
+      return palettes[palettes.length - 1][1];
+    }
+
+    function updateAtmosphere() {
+      const progress = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+      atmoEl.style.background = interpColor(Math.min(progress, 1));
+    }
+    updateAtmosphere();
+
+    window.addEventListener('scroll', () => {
+      updateProgress();
+      handleNavScroll();
+      updateAtmosphere();
+      updateWaves();
+    }, { passive: true });
+  })();
+
+  /* ─── GALLERY ─────────────────────────────────────────────────── */
+  // IMAGE REPLACEMENT: Replace these Unsplash URLs with your own photos
+  // Format: { src: 'URL', alt: 'description', category: 'couple|hawaii|venue' }
+  const GALLERY_IMAGES = [
+    { src: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80', alt: 'Couple on beach', cat: 'couple' },
+    { src: 'https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=800&q=80', alt: 'Hawaii coastline', cat: 'hawaii' },
+    { src: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800&q=80', alt: 'Tropical sunset', cat: 'hawaii' },
+    { src: 'https://images.unsplash.com/photo-1529543544282-ea669407fca3?w=800&q=80', alt: 'Engagement photo', cat: 'couple' },
+    { src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80', alt: 'Waikiki ocean view', cat: 'hawaii' },
+    { src: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80', alt: 'Luxury resort', cat: 'venue' },
+    { src: 'https://images.unsplash.com/photo-1543731068-7e0f5beff43a?w=800&q=80', alt: 'Romantic couple', cat: 'couple' },
+    { src: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&q=80', alt: 'Ocean waves', cat: 'hawaii' },
+    { src: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80', alt: 'Hawaiian resort pool', cat: 'venue' },
+    { src: 'https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=800&q=80', alt: 'Beach wedding setup', cat: 'venue' },
+    { src: 'https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?w=800&q=80', alt: 'Tropical flowers', cat: 'hawaii' },
+    { src: 'https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?w=800&q=80', alt: 'Couple at sunset', cat: 'couple' },
+  ];
+
+  (function initGallery() {
+    const grid    = qs('#gallery-grid');
+    const lightbox = qs('#lightbox');
+    const lbImg   = qs('#lb-img');
+    const lbCap   = qs('#lb-caption');
+    const lbClose = qs('#lb-close');
+    const lbPrev  = qs('#lb-prev');
+    const lbNext  = qs('#lb-next');
+    if (!grid) return;
+
+    let current = 0;
+    const visible = () => GALLERY_IMAGES;
+
+    function buildGrid() {
+      grid.innerHTML = '';
+      visible().forEach((img, i) => {
+        const item = document.createElement('div');
+        item.className = 'gallery-item reveal';
+        item.style.transitionDelay = (i % 6) * 0.07 + 's';
+        item.innerHTML = `<img src="${img.src}" alt="${img.alt}" loading="lazy">
+                          <div class="gallery-item-overlay"><span>${img.alt}</span></div>`;
+        item.addEventListener('click', () => openLightbox(i));
+        grid.appendChild(item);
+        // Re-observe for reveal
+        if (window._revealObserver) window._revealObserver.observe(item);
+      });
+      // Re-trigger observer for new items
+      qsa('.gallery-item.reveal').forEach(el => {
+        const obs = new IntersectionObserver(entries => {
+          entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        obs.observe(el);
+      });
+    }
+
+    function openLightbox(i) {
+      const imgs = visible();
+      current = i;
+      lbImg.src = imgs[i].src;
+      lbImg.alt = imgs[i].alt;
+      if (lbCap) lbCap.textContent = imgs[i].alt;
+      lightbox?.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      lbImg.focus();
+    }
+
+    function closeLightbox() {
+      lightbox?.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function navigate(dir) {
+      const imgs = visible();
+      current = (current + dir + imgs.length) % imgs.length;
+      lbImg.style.opacity = '0';
+      setTimeout(() => {
+        lbImg.src = imgs[current].src;
+        lbImg.alt = imgs[current].alt;
+        if (lbCap) lbCap.textContent = imgs[current].alt;
+        lbImg.style.opacity = '1';
+      }, 200);
+    }
+
+    lbClose?.addEventListener('click', closeLightbox);
+    lbPrev?.addEventListener('click', () => navigate(-1));
+    lbNext?.addEventListener('click', () => navigate(1));
+    lightbox?.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+    document.addEventListener('keydown', e => {
+      if (!lightbox?.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') navigate(-1);
+      if (e.key === 'ArrowRight') navigate(1);
+    });
+
+    buildGrid();
+  })();
+
+  /* ─── TRAVEL TABS ─────────────────────────────────────────────── */
+  (function initTabs() {
+    const tabBtns = qsa('.tab-btn');
+    const tabPanels = qsa('.tab-panel');
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.tab;
+        tabBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+        tabPanels.forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        const panel = qs(`#tab-${target}`);
+        if (panel) panel.classList.add('active');
+      });
+    });
+  })();
+
+  /* ─── EXPLORE FILTER ─────────────────────────────────────────── */
+  (function initFilter() {
+    const filterBtns = qsa('.filter-btn');
+    const cards      = qsa('.explore-card');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cat = btn.dataset.filter;
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        cards.forEach(card => {
+          if (cat === 'all' || card.dataset.category === cat) {
+            card.style.display = '';
+            setTimeout(() => card.classList.add('visible'), 30);
+          } else {
+            card.classList.remove('visible');
+            setTimeout(() => { if (!card.classList.contains('visible')) card.style.display = 'none'; }, 350);
+          }
+        });
+      });
+    });
+  })();
+
+  /* ─── FAQ ACCORDION ──────────────────────────────────────────── */
+  (function initFAQ() {
+    qsa('.faq-item').forEach(item => {
+      const btn = qs('.faq-question', item);
+      const ans = qs('.faq-answer',   item);
+      if (!btn || !ans) return;
+      btn.addEventListener('click', () => {
+        const open = item.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open);
+        ans.style.maxHeight = open ? ans.scrollHeight + 'px' : '0';
+      });
+    });
+  })();
+
+  /* ─── ATTENDING TOGGLE (RSVP) ───────────────────────────────── */
+  (function initAttending() {
+    const yesBtn  = qs('#attending-yes');
+    const noBtn   = qs('#attending-no');
+    const hiddenField = qs('#attending-value');
+    const guestSection = qs('#guest-section');
+
+    function setAttending(val) {
+      if (hiddenField) hiddenField.value = val;
+      yesBtn?.classList.toggle('active', val === 'yes');
+      noBtn?.classList.toggle('active',  val === 'no');
+      if (guestSection) {
+        guestSection.style.display = val === 'yes' ? '' : 'none';
+      }
+    }
+
+    yesBtn?.addEventListener('click', () => setAttending('yes'));
+    noBtn?.addEventListener('click',  () => setAttending('no'));
+  })();
+
+  /* ─── RSVP FORM ──────────────────────────────────────────────── */
+  (function initRSVP() {
+    const form    = qs('#rsvp-form');
+    const success = qs('#rsvp-success');
+    const exportBtn = qs('#export-btn');
+    if (!form) return;
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!validateRSVP(form)) return;
+
+      const data = {
+        id:         Date.now(),
+        submitted:  new Date().toLocaleString(),
+        firstName:  qs('#firstName', form)?.value.trim() || '',
+        lastName:   qs('#lastName',  form)?.value.trim() || '',
+        attending:  qs('#attending-value', form)?.value || '',
+        guestCount: qs('#guestCount', form)?.value || '1',
+        plusOneName:qs('#plusOneName', form)?.value.trim() || '',
+        notes:      qs('#notes', form)?.value.trim() || '',
+        email:      qs('#email', form)?.value.trim() || '',
+      };
+
+      // Save to localStorage
+      const existing = JSON.parse(localStorage.getItem('rsvp_responses') || '[]');
+      existing.push(data);
+      localStorage.setItem('rsvp_responses', JSON.stringify(existing));
+
+      // Show success
+      form.style.display = 'none';
+      if (success) {
+        success.style.display = 'block';
+        success.innerHTML = `
+          <div class="rsvp-success-inner">
+            <div class="success-icon">✦</div>
+            <h3>Mahalo, ${data.firstName}!</h3>
+            <p>${data.attending === 'yes'
+              ? "We're so excited you'll be joining us in paradise. More details coming soon!"
+              : "We'll miss you! We hope to celebrate with you in other ways."}</p>
+          </div>`;
+      }
+    });
+
+    // Export CSV
+    if (exportBtn) {
+      exportBtn.addEventListener('click', () => {
+        const responses = JSON.parse(localStorage.getItem('rsvp_responses') || '[]');
+        if (!responses.length) { alert('No RSVP responses yet.'); return; }
+        const headers = ['ID','Submitted','First Name','Last Name','Attending','Guest Count','Plus One Name','Notes','Email'];
+        const rows = responses.map(r => [
+          r.id, r.submitted, r.firstName, r.lastName,
+          r.attending, r.guestCount, r.plusOneName,
+          `"${(r.notes||'').replace(/"/g,'""')}"`, r.email
+        ]);
+        const csv = [headers, ...rows].map(r => r.join(',')).join('\n');
+        const blob = new Blob([csv], { type: 'text/csv' });
+        const url  = URL.createObjectURL(blob);
+        const a    = document.createElement('a');
+        a.href = url; a.download = 'rsvp-responses.csv';
+        document.body.appendChild(a); a.click();
+        document.body.removeChild(a); URL.revokeObjectURL(url);
+      });
+    }
+  })();
+
+  /* ─── RSVP VALIDATION ─────────────────────────────────────────── */
+  function validateRSVP(form) {
+    let valid = true;
+    qsa('.field-error', form).forEach(e => e.remove());
+    qsa('[required]', form).forEach(field => {
+      if (!field.value.trim()) {
+        showFieldError(field, 'This field is required.');
+        valid = false;
+      }
+    });
+    const attending = qs('#attending-value', form)?.value;
+    if (!attending) {
+      const attGroup = qs('.attending-group', form);
+      if (attGroup) showFieldError(attGroup, 'Please select your attendance.');
+      valid = false;
+    }
+    const email = qs('#email', form);
+    if (email?.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+      showFieldError(email, 'Please enter a valid email address.');
+      valid = false;
+    }
+    return valid;
+  }
+
+  function showFieldError(field, msg) {
+    const err = document.createElement('span');
+    err.className = 'field-error';
+    err.textContent = msg;
+    err.style.cssText = 'display:block;color:#c0392b;font-size:0.78rem;margin-top:4px;';
+    field.insertAdjacentElement('afterend', err);
+  }
+
+  /* ─── WAVES PARALLAX ─────────────────────────────────────────── */
+  function updateWaves() {
+    qsa('.wave-svg').forEach(wave => {
+      const rect = wave.closest('section, .wave-divider')?.getBoundingClientRect();
+      if (!rect) return;
+      const speed = parseFloat(wave.dataset.speed || '0.3');
+      const offset = (rect.top / window.innerHeight) * speed * 20;
+      wave.style.transform = `translateY(${offset}px)`;
+    });
+  }
+
+  /* ─── SMOOTH SCROLL ──────────────────────────────────────────── */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      const offset = nav ? nav.offsetHeight + 16 : 80;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+
+  /* ─── ENTER EXPERIENCE BUTTON ─────────────────────────────────── */
+  const enterBtn = qs('#enter-btn');
+  if (enterBtn) {
+    enterBtn.addEventListener('click', () => {
+      const saveTheDate = qs('#save-the-date');
+      if (!saveTheDate) return;
+      const offset = nav ? nav.offsetHeight + 16 : 80;
+      const top = saveTheDate.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  }
+
+  /* ─── LIGHTBOX CSS (injected) ─────────────────────────────────── */
+  const lbStyle = document.createElement('style');
+  lbStyle.textContent = `
+    #lightbox { display:none; position:fixed; inset:0; background:rgba(7,25,38,0.96);
+      z-index:10000; align-items:center; justify-content:center; flex-direction:column; }
+    #lightbox.open { display:flex; }
+    #lb-img { max-width:90vw; max-height:82vh; object-fit:contain; border-radius:4px;
+      opacity:1; transition:opacity 0.2s ease; box-shadow:0 24px 80px rgba(0,0,0,0.6); }
+    #lb-caption { color:rgba(255,255,255,0.6); font-family:'Jost',sans-serif;
+      font-size:0.85rem; margin-top:16px; letter-spacing:0.06em; }
+    #lb-close { position:fixed; top:24px; right:28px; background:none; border:none;
+      color:#fff; font-size:2rem; cursor:pointer; line-height:1; opacity:0.7; transition:opacity 0.2s; }
+    #lb-close:hover { opacity:1; }
+    #lb-prev, #lb-next { position:fixed; top:50%; transform:translateY(-50%);
+      background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15);
+      color:#fff; font-size:1.5rem; cursor:pointer; padding:14px 18px;
+      border-radius:4px; transition:background 0.2s; }
+    #lb-prev { left:16px; } #lb-next { right:16px; }
+    #lb-prev:hover, #lb-next:hover { background:rgba(255,255,255,0.18); }
+    .rsvp-success-inner { text-align:center; padding:48px 24px; }
+    .success-icon { font-size:3rem; color:var(--gold); margin-bottom:24px; }
+    .rsvp-success-inner h3 { font-family:'Cormorant Garamond',serif; font-size:2.4rem;
+      color:var(--white); margin-bottom:16px; }
+    .rsvp-success-inner p { color:var(--text-muted); line-height:1.7; max-width:480px; margin:0 auto; }
+    .hamburger.active span:nth-child(1) { transform:translateY(8px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity:0; transform:scaleX(0); }
+    .hamburger.active span:nth-child(3) { transform:translateY(-8px) rotate(-45deg); }
+    .attending-btn.active { background:var(--gold); color:var(--navy); border-color:var(--gold); }
+  `;
+  document.head.appendChild(lbStyle);
+
+  /* ─── LIGHTBOX HTML (injected) ──────────────────────────────── */
+  if (!qs('#lightbox')) {
+    document.body.insertAdjacentHTML('beforeend', `
+      <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <button id="lb-close" aria-label="Close lightbox">×</button>
+        <button id="lb-prev" aria-label="Previous image">&#8592;</button>
+        <img id="lb-img" src="" alt="" tabindex="0">
+        <p id="lb-caption"></p>
+        <button id="lb-next" aria-label="Next image">&#8594;</button>
+      </div>
+    `);
+  }
+
+  /* ─── INITIAL SCROLL SETUP ───────────────────────────────────── */
+  updateProgress();
+  handleNavScroll();
+  </script>
+</body>
+</html>
