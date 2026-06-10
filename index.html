@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="L &amp; R 2027" />
+  <meta name="theme-color" content="#071926" />
+  <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=180&q=90" />
+  <link rel="manifest" href="manifest.json" />
   <title>Lauren &amp; Rolando — Waikiki, Hawaii 2027</title>
   <meta name="description" content="Join Lauren Rodriguez &amp; Rolando Salazar for their destination wedding in Waikiki, Hawaii — Coming 2027." />
   <meta property="og:title" content="Lauren &amp; Rolando — Waikiki 2027" />
@@ -591,9 +597,125 @@
       .nav-link,.tab-btn,.filter-btn,.faq-question,.map-pin,.attending-btn{min-height:44px;display:flex;align-items:center}
       .hero-dot{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center}
     }
+
+    /* ═══════════════════════════════════════════════
+       IPHONE 5-STAR UX — All new features
+    ═══════════════════════════════════════════════ */
+
+    /* Safe area insets for iPhone notch/Dynamic Island */
+    body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
+    #main-nav { padding-top: max(1rem, env(safe-area-inset-top)); }
+    #sound-btn { bottom: max(28px, env(safe-area-inset-bottom)); }
+
+    /* Cursor trail — desktop only */
+    .cursor-trail { position: fixed; pointer-events: none; z-index: 9999; border-radius: 50%; transform: translate(-50%,-50%); transition: opacity 0.3s; }
+
+    /* Magnetic button wrapper */
+    .magnetic { display: inline-block; transition: transform 0.3s cubic-bezier(0.23,1,0.32,1); }
+
+    /* Side dot navigation */
+    #dot-nav { position: fixed; right: 16px; top: 50%; transform: translateY(-50%); z-index: 400; display: flex; flex-direction: column; gap: 10px; }
+    .dot-nav-item { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.3); cursor: pointer; transition: all 0.3s ease; position: relative; }
+    .dot-nav-item.active { background: var(--champagne); transform: scale(1.5); }
+    .dot-nav-item:hover { background: rgba(255,255,255,0.7); }
+    .dot-nav-tooltip { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); background: rgba(7,25,38,0.9); color: var(--champagne); font-family: var(--font-body); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 0.2s; }
+    .dot-nav-item:hover .dot-nav-tooltip { opacity: 1; }
+    @media(max-width:768px) { #dot-nav { right: 8px; } .dot-nav-tooltip { display: none; } }
+
+    /* Skeleton loading */
+    .skeleton { background: linear-gradient(90deg, rgba(201,169,110,0.06) 25%, rgba(201,169,110,0.12) 50%, rgba(201,169,110,0.06) 75%); background-size: 200% 100%; animation: skeletonPulse 1.5s ease infinite; border-radius: 4px; }
+    @keyframes skeletonPulse { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+    /* Dark / Light mode toggle */
+    #theme-toggle { background: none; border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.7); width: 34px; height: 34px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; transition: all 0.3s; margin-left: 8px; flex-shrink: 0; }
+    #theme-toggle:hover { border-color: var(--champagne); color: var(--champagne); }
+    body.light-mode { --navy-deep: #f0ede8; --navy: #e8e4de; --pearl: #ffffff; --white: #0F2B3D; --text: #0F2B3D; --text-muted: rgba(15,43,61,0.55); }
+    body.light-mode #main-nav { background: rgba(248,246,242,0.92); border-bottom-color: rgba(201,169,110,0.15); }
+    body.light-mode .nav-monogram, body.light-mode .nav-links a { color: var(--navy) !important; }
+    body.light-mode #sound-btn { background: rgba(15,43,61,0.08); border-color: rgba(201,169,110,0.3); }
+    body.light-mode #sound-btn svg { color: var(--navy); }
+
+    /* Personalized greeting banner */
+    #greeting-bar { display: none; background: linear-gradient(135deg, var(--navy-deep), var(--navy)); border-bottom: 1px solid rgba(201,169,110,0.15); padding: 10px 20px; text-align: center; font-family: var(--font-body); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--champagne); }
+    #greeting-bar.show { display: block; }
+
+    /* Live guest counter */
+    .live-count-wrap { display: inline-flex; align-items: center; gap: 10px; margin-top: 1.5rem; padding: 10px 20px; background: rgba(201,169,110,0.08); border: 1px solid rgba(201,169,110,0.2); border-radius: 40px; }
+    .live-count-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 6px #4ade80; animation: livePulse 2s ease infinite; }
+    @keyframes livePulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .live-count-text { font-family: var(--font-body); font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--champagne); }
+    .live-count-num { font-family: var(--font-display); font-size: 1.1rem; color: var(--champagne); }
+
+    /* Better RSVP inline validation */
+    .form-input.valid { border-color: rgba(74,222,128,0.5); }
+    .form-input.invalid { border-color: rgba(248,113,113,0.6); }
+    .form-hint { font-size: 0.68rem; margin-top: 5px; transition: color 0.2s; }
+    .form-hint.ok { color: #4ade80; }
+    .form-hint.err { color: #f87171; }
+
+    /* Meal choice & song request in RSVP */
+    .meal-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 8px; }
+    .meal-option { padding: 12px; border: 1px solid rgba(201,169,110,0.2); border-radius: 4px; text-align: center; cursor: pointer; transition: all 0.2s; font-family: var(--font-body); font-size: 0.78rem; color: var(--text); }
+    .meal-option.selected { border-color: var(--champagne); background: rgba(201,169,110,0.08); color: var(--champagne); }
+    .meal-option-emoji { font-size: 1.4rem; display: block; margin-bottom: 4px; }
+
+    /* Print style */
+    @media print {
+      #main-nav, #sound-btn, #dot-nav, #theme-toggle, .hero-scroll-hint, #preloader { display: none !important; }
+      #hero { height: 40vh; }
+      body { background: white; }
+      * { color: #000 !important; box-shadow: none !important; }
+    }
+
+    /* Offline banner */
+    #offline-bar { display: none; position: fixed; top: 0; left: 0; right: 0; z-index: 10000; background: #1a1a1a; color: #fff; text-align: center; padding: 10px; font-family: var(--font-body); font-size: 0.75rem; letter-spacing: 0.1em; }
+    #offline-bar.show { display: block; }
+
+    /* Easter egg */
+    #easter-egg { display: none; position: fixed; inset: 0; z-index: 99999; background: var(--navy-deep); align-items: center; justify-content: center; flex-direction: column; text-align: center; padding: 40px; }
+    #easter-egg.show { display: flex; animation: eggFadeIn 0.5s ease; }
+    @keyframes eggFadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .egg-title { font-family: var(--font-display); font-size: clamp(2rem,8vw,4rem); color: var(--champagne); margin-bottom: 20px; }
+    .egg-msg { font-family: var(--font-body); font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 2; letter-spacing: 0.1em; max-width: 380px; }
+    .egg-close { margin-top: 32px; background: none; border: 1px solid rgba(201,169,110,0.3); color: var(--champagne); padding: 12px 28px; font-family: var(--font-body); font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; border-radius: 2px; }
+
+    /* Scroll progress dots on mobile hero */
+    .hero-progress { position: absolute; bottom: 90px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 5; }
+    .hero-prog-dot { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,0.3); transition: all 0.3s; }
+    .hero-prog-dot.active { width: 20px; border-radius: 2px; background: var(--champagne); }
+
+    /* High contrast focus for accessibility */
+    :focus-visible { outline: 2px solid var(--champagne); outline-offset: 3px; }
+
+    /* Smooth section transitions */
+    section { transition: opacity 0.1s; }
+
+    /* Pull to refresh hint */
+    #ptr-hint { position: fixed; top: -60px; left: 50%; transform: translateX(-50%); background: rgba(201,169,110,0.9); color: var(--navy); padding: 10px 20px; border-radius: 0 0 20px 20px; font-family: var(--font-body); font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; z-index: 9999; transition: top 0.3s ease; pointer-events: none; }
+    #ptr-hint.visible { top: 0; }
+
   </style>
 </head>
 <body>
+  <!-- Greeting bar -->
+  <div id="greeting-bar" aria-live="polite"></div>
+  <!-- Offline bar -->
+  <div id="offline-bar">📵 You're offline — the site still works!</div>
+  <!-- Pull to refresh hint -->
+  <div id="ptr-hint">🌺 Aloha! Welcome back</div>
+  <!-- Easter egg overlay -->
+  <div id="easter-egg" role="dialog" aria-modal="true">
+    <p class="egg-title">🌺 Mahalo!</p>
+    <p class="egg-msg">
+      You found our little secret.<br><br>
+      Lauren & Rolando can't wait to see you in Waikiki.<br><br>
+      <em style="color:var(--champagne)">Aloha means hello, goodbye, and love — all at once. See you in paradise. 🌊</em>
+    </p>
+    <button class="egg-close" id="egg-close">Close ✦</button>
+  </div>
+  <!-- Side dot navigation -->
+  <nav id="dot-nav" aria-label="Page sections"></nav>
+
   <!-- Cinematic Intro -->
   <div id="preloader" aria-hidden="true">
     <div class="cinema-wrap">
@@ -615,6 +737,7 @@
   <nav id="nav" role="navigation" aria-label="Main navigation">
     <a href="#hero" class="nav-monogram" aria-label="Lauren and Rolando home">L &amp; R</a>
     <span class="hawaii-badge" id="hawaii-badge"></span>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle theme">☀️</button>
     <div class="nav-links">
       <a href="#save-the-date">Save the Date</a>
       <a href="#story">Our Story</a>
@@ -1245,6 +1368,10 @@
         <p class="t-eyebrow reveal" style="color:var(--champagne)">You're Invited</p>
         <h2 class="t-heading reveal reveal-delay-1 split-reveal" style="color:var(--white);margin-top:0.8rem">RSVP</h2>
         <p class="reveal reveal-delay-2" style="color:rgba(255,255,255,0.4);font-size:0.85rem;margin-top:0.8rem">Let us know you'll be celebrating with us in paradise.</p>
+        <div class="live-count-wrap reveal reveal-delay-3">
+          <span class="live-count-dot"></span>
+          <span class="live-count-text"><span class="live-count-num" id="live-count">0</span> guests have RSVP'd so far</span>
+        </div>
       </div>
       <div class="rsvp-form-wrap">
         <form id="rsvp-form" class="reveal reveal-delay-2" novalidate aria-label="RSVP form">
@@ -1283,6 +1410,20 @@
               <label class="form-label" for="rsvp-plusone">Plus One Name</label>
               <input type="text" id="rsvp-plusone" name="plusOneName" class="form-input" placeholder="Guest's name" autocomplete="off"/>
             </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Meal Preference</label>
+            <div class="meal-options" id="meal-options">
+              <div class="meal-option" data-meal="fish"><span class="meal-option-emoji">🐟</span>Fresh Fish</div>
+              <div class="meal-option" data-meal="chicken"><span class="meal-option-emoji">🍗</span>Chicken</div>
+              <div class="meal-option" data-meal="vegetarian"><span class="meal-option-emoji">🥗</span>Vegetarian</div>
+              <div class="meal-option" data-meal="vegan"><span class="meal-option-emoji">🌿</span>Vegan</div>
+            </div>
+            <input type="hidden" id="rsvp-meal" name="meal" value="">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="rsvp-song">Song Request 🎵</label>
+            <input type="text" id="rsvp-song" name="song" class="form-input" placeholder="What song will get you on the dance floor?" autocomplete="off"/>
           </div>
           <div class="form-group">
             <label class="form-label" for="rsvp-notes">Message or Dietary Notes</label>
@@ -2251,6 +2392,250 @@
     });
 
     loadSaved();
+  })();
+
+  /* ─── PWA SERVICE WORKER ─────────────────────────────────────── */
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(() => {});
+    });
+  }
+
+  /* ─── OFFLINE DETECTION ──────────────────────────────────────── */
+  const offlineBar = qs('#offline-bar');
+  window.addEventListener('offline', () => offlineBar?.classList.add('show'));
+  window.addEventListener('online',  () => offlineBar?.classList.remove('show'));
+
+  /* ─── CURSOR TRAIL (desktop only) ───────────────────────────── */
+  (function initCursorTrail() {
+    if (window.innerWidth < 1024 || window.matchMedia('(hover:none)').matches) return;
+    const trails = [];
+    for (let i = 0; i < 8; i++) {
+      const el = document.createElement('div');
+      el.className = 'cursor-trail';
+      const size = 4 + i * 1.5;
+      el.style.cssText = `width:${size}px;height:${size}px;background:rgba(201,169,110,${0.5 - i*0.05});z-index:${9999-i}`;
+      document.body.appendChild(el);
+      trails.push({ el, x: 0, y: 0 });
+    }
+    let mx = 0, my = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+    function animate() {
+      let px = mx, py = my;
+      trails.forEach((t, i) => {
+        t.x += (px - t.x) * (0.35 - i * 0.03);
+        t.y += (py - t.y) * (0.35 - i * 0.03);
+        t.el.style.left = t.x + 'px';
+        t.el.style.top  = t.y + 'px';
+        px = t.x; py = t.y;
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+  })();
+
+  /* ─── MAGNETIC BUTTONS ───────────────────────────────────────── */
+  (function initMagnetic() {
+    if (window.matchMedia('(hover:none)').matches) return;
+    qsa('.btn, .btn-rsvp, .cal-btn, .map-pin').forEach(btn => {
+      btn.addEventListener('mousemove', e => {
+        const r = btn.getBoundingClientRect();
+        const x = (e.clientX - r.left - r.width  / 2) * 0.25;
+        const y = (e.clientY - r.top  - r.height / 2) * 0.25;
+        btn.style.transform = `translate(${x}px,${y}px)`;
+      });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+    });
+  })();
+
+  /* ─── SIDE DOT NAVIGATION ────────────────────────────────────── */
+  (function initDotNav() {
+    const dotNav = qs('#dot-nav');
+    if (!dotNav) return;
+    const sections = [
+      { id: 'save-the-date', label: 'Save the Date' },
+      { id: 'details',       label: 'Details' },
+      { id: 'story',         label: 'Our Story' },
+      { id: 'travel',        label: 'Travel' },
+      { id: 'itinerary',     label: 'Itinerary' },
+      { id: 'waikiki-map',   label: 'Map' },
+      { id: 'message-wall',  label: 'Messages' },
+      { id: 'guest-photos',  label: 'Photos' },
+      { id: 'rsvp',          label: 'RSVP' },
+    ].filter(s => qs('#' + s.id));
+
+    sections.forEach(s => {
+      const dot = document.createElement('button');
+      dot.className = 'dot-nav-item';
+      dot.setAttribute('aria-label', s.label);
+      dot.innerHTML = `<span class="dot-nav-tooltip">${s.label}</span>`;
+      dot.addEventListener('click', () => {
+        const el = qs('#' + s.id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      dotNav.appendChild(dot);
+    });
+
+    const dots = qsa('.dot-nav-item', dotNav);
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const idx = sections.findIndex(s => s.id === entry.target.id);
+          dots.forEach((d,i) => d.classList.toggle('active', i === idx));
+        }
+      });
+    }, { threshold: 0.5 });
+    sections.forEach(s => { const el = qs('#' + s.id); if (el) obs.observe(el); });
+  })();
+
+  /* ─── PERSONALIZED GREETING ──────────────────────────────────── */
+  (function initGreeting() {
+    const bar = qs('#greeting-bar');
+    if (!bar) return;
+    const name = localStorage.getItem('rsvp_name');
+    if (name) {
+      bar.textContent = `Aloha, ${name}! 🌺 Welcome back — we can't wait to see you in Waikiki`;
+      bar.classList.add('show');
+    }
+  })();
+
+  /* ─── LIVE GUEST COUNT ───────────────────────────────────────── */
+  (function initLiveCount() {
+    const el = qs('#live-count');
+    if (!el) return;
+    const responses = JSON.parse(localStorage.getItem('rsvp_responses') || '[]');
+    const attending = responses.filter(r => r.attending === 'yes').reduce((sum, r) => sum + parseInt(r.guestCount || 1), 0);
+    // Animate count up
+    let current = 0;
+    const target = attending;
+    if (target === 0) return;
+    const step = Math.ceil(target / 30);
+    const timer = setInterval(() => {
+      current = Math.min(current + step, target);
+      el.textContent = current;
+      if (current >= target) clearInterval(timer);
+    }, 40);
+  })();
+
+  /* ─── DARK / LIGHT MODE TOGGLE ───────────────────────────────── */
+  (function initThemeToggle() {
+    const btn = qs('#theme-toggle');
+    if (!btn) return;
+    const saved = localStorage.getItem('theme');
+    if (saved === 'light') { document.body.classList.add('light-mode'); btn.textContent = '🌙'; }
+    btn.addEventListener('click', () => {
+      const isLight = document.body.classList.toggle('light-mode');
+      btn.textContent = isLight ? '🌙' : '☀️';
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+  })();
+
+  /* ─── INLINE FORM VALIDATION ─────────────────────────────────── */
+  (function initInlineValidation() {
+    const rules = {
+      'rsvp-first': v => v.length >= 2 ? '' : 'At least 2 characters',
+      'rsvp-last':  v => v.length >= 2 ? '' : 'At least 2 characters',
+    };
+    Object.entries(rules).forEach(([id, validate]) => {
+      const input = qs(`#${id}`);
+      if (!input) return;
+      let hint = input.parentElement.querySelector('.form-hint');
+      if (!hint) { hint = document.createElement('span'); hint.className = 'form-hint'; input.after(hint); }
+      input.addEventListener('input', () => {
+        const err = validate(input.value.trim());
+        input.classList.toggle('valid',   !err && input.value.length > 0);
+        input.classList.toggle('invalid',  !!err && input.value.length > 0);
+        hint.textContent = err;
+        hint.className = 'form-hint ' + (err ? 'err' : 'ok');
+        if (!err && input.value.length > 0) hint.textContent = '✓ Looks good';
+      });
+    });
+  })();
+
+  /* ─── MEAL CHOICE ────────────────────────────────────────────── */
+  (function initMealChoice() {
+    const options = qsa('.meal-option');
+    const hidden  = qs('#rsvp-meal');
+    options.forEach(opt => {
+      opt.addEventListener('click', () => {
+        options.forEach(o => o.classList.remove('selected'));
+        opt.classList.add('selected');
+        if (hidden) hidden.value = opt.dataset.meal;
+        // Haptic feedback on iPhone
+        if (navigator.vibrate) navigator.vibrate(10);
+      });
+    });
+  })();
+
+  /* ─── HAPTIC FEEDBACK ON RSVP SUBMIT ────────────────────────── */
+  (function initHaptic() {
+    const form = qs('#rsvp-form');
+    if (!form || !navigator.vibrate) return;
+    form.addEventListener('submit', () => {
+      navigator.vibrate([50, 30, 80, 30, 120]); // celebration pattern
+    });
+  })();
+
+  /* ─── PULL TO REFRESH EASTER EGG ────────────────────────────── */
+  (function initPullToRefresh() {
+    const hint = qs('#ptr-hint');
+    if (!hint) return;
+    let startY = 0, pulling = false;
+    document.addEventListener('touchstart', e => {
+      if (window.scrollY === 0) { startY = e.touches[0].clientY; pulling = true; }
+    }, { passive: true });
+    document.addEventListener('touchmove', e => {
+      if (!pulling) return;
+      const dy = e.touches[0].clientY - startY;
+      if (dy > 60) { hint.classList.add('visible'); }
+    }, { passive: true });
+    document.addEventListener('touchend', () => {
+      pulling = false;
+      setTimeout(() => hint.classList.remove('visible'), 1800);
+    });
+  })();
+
+  /* ─── EASTER EGG — type ALOHA ────────────────────────────────── */
+  (function initEasterEgg() {
+    const egg     = qs('#easter-egg');
+    const closeBtn = qs('#egg-close');
+    if (!egg) return;
+    let typed = '';
+    document.addEventListener('keydown', e => {
+      typed += e.key.toUpperCase();
+      if (typed.length > 5) typed = typed.slice(-5);
+      if (typed === 'ALOHA') {
+        egg.classList.add('show');
+        window.launchConfetti?.();
+        typed = '';
+      }
+    });
+    closeBtn?.addEventListener('click', () => egg.classList.remove('show'));
+    egg.addEventListener('click', e => { if (e.target === egg) egg.classList.remove('show'); });
+  })();
+
+  /* ─── SAVE RSVP NAME FOR GREETING ────────────────────────────── */
+  (function patchRsvpForGreeting() {
+    const form = qs('#rsvp-form');
+    if (!form) return;
+    form.addEventListener('submit', () => {
+      const name = qs('#rsvp-first')?.value.trim();
+      if (name) localStorage.setItem('rsvp_name', name);
+    });
+  })();
+
+  /* ─── SKELETON LOADING FOR GALLERY ──────────────────────────── */
+  (function initSkeletons() {
+    const grid = qs('#masonry-grid');
+    if (!grid || grid.children.length > 0) return;
+    for (let i = 0; i < 8; i++) {
+      const sk = document.createElement('div');
+      sk.className = 'skeleton';
+      sk.style.cssText = `height:${120 + Math.random()*120}px;margin-bottom:10px;break-inside:avoid;border-radius:4px`;
+      grid.appendChild(sk);
+    }
+    // Remove skeletons once gallery JS loads images
+    setTimeout(() => { qsa('.skeleton', grid).forEach(s => s.remove()); }, 2000);
   })();
 
   /* ─── INITIAL SCROLL SETUP ───────────────────────────────────── */
