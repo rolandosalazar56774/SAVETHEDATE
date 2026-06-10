@@ -1,0 +1,24 @@
+{
+  "name": "Lauren & Rolando — Waikiki 2027",
+  "short_name": "L & R 2027",
+  "description": "Save the date — destination wedding in Waikiki, Hawaii 2027",
+  "start_url": "/SAVETHEDATE/",
+  "display": "standalone",
+  "background_color": "#071926",
+  "theme_color": "#071926",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=192&q=90",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=512&q=90",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
