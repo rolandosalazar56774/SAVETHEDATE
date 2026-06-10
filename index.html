@@ -161,6 +161,56 @@
     body.hawaii-night{--pearl:#09182a;--pearl-lt:#0f2236;--text:rgba(235,225,205,0.92);--text-muted:rgba(190,175,150,0.6)}
     body.hawaii-night #save-the-date,body.hawaii-night #details,body.hawaii-night #story,body.hawaii-night #travel,body.hawaii-night #faq,body.hawaii-night #explore{background:var(--pearl)}
     body.hawaii-night .detail-card,body.hawaii-night .faq-item{background:rgba(255,255,255,0.03);border-color:rgba(201,169,110,0.12)}
+
+    /* 3D Tilt Cards */
+    .detail-card{transform-style:preserve-3d;transition:transform 0.15s ease,background 0.4s,box-shadow 0.3s}
+    .detail-card:hover{box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+
+    /* Save to Calendar button */
+    .cal-btn{display:inline-flex;align-items:center;gap:10px;margin-top:2.5rem;padding:14px 28px;background:transparent;border:1px solid rgba(201,169,110,0.4);color:var(--champagne);font-family:var(--font-body);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:background 0.3s,border-color 0.3s}
+    .cal-btn:hover{background:rgba(201,169,110,0.1);border-color:var(--champagne)}
+    .cal-btn svg{width:16px;height:16px}
+
+    /* Waikiki Map */
+    #waikiki-map{padding:var(--section-pad) var(--gutter);background:var(--pearl);text-align:center}
+    .map-wrap{position:relative;border-radius:8px;overflow:hidden;margin-top:3rem;box-shadow:0 24px 80px rgba(0,0,0,0.12)}
+    .map-wrap iframe{width:100%;height:500px;border:none;display:block;filter:saturate(0.85) contrast(1.05)}
+    .map-pins{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:2rem}
+    .map-pin{display:flex;align-items:center;gap:8px;padding:10px 18px;background:var(--navy-deep);color:var(--white);border-radius:40px;font-family:var(--font-body);font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;transition:background 0.2s;text-decoration:none}
+    .map-pin:hover{background:var(--champagne);color:var(--navy)}
+    .map-pin-dot{width:8px;height:8px;border-radius:50%;background:var(--champagne);flex-shrink:0}
+    .map-pin:hover .map-pin-dot{background:var(--navy)}
+
+    /* Guest Message Wall */
+    #message-wall{padding:var(--section-pad) var(--gutter);background:var(--navy-deep);text-align:center}
+    .message-form{max-width:560px;margin:2.5rem auto 3rem;display:flex;flex-direction:column;gap:16px}
+    .message-form input,.message-form textarea{background:rgba(255,255,255,0.05);border:1px solid rgba(201,169,110,0.2);color:var(--white);font-family:var(--font-body);font-size:0.9rem;padding:14px 18px;border-radius:2px;outline:none;transition:border-color 0.3s;resize:none}
+    .message-form input::placeholder,.message-form textarea::placeholder{color:rgba(255,255,255,0.25)}
+    .message-form input:focus,.message-form textarea:focus{border-color:var(--champagne)}
+    .message-form button{padding:15px;background:var(--champagne);color:var(--navy);font-family:var(--font-body);font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;border:none;cursor:pointer;border-radius:2px;transition:opacity 0.2s;font-weight:500}
+    .message-form button:hover{opacity:0.85}
+    .messages-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;max-width:1100px;margin:0 auto;text-align:left}
+    .message-card{background:rgba(255,255,255,0.04);border:1px solid rgba(201,169,110,0.1);border-radius:4px;padding:24px;animation:msgFadeIn 0.5s ease}
+    @keyframes msgFadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+    .message-card-name{font-family:var(--font-display);font-size:1.1rem;color:var(--champagne);margin-bottom:8px}
+    .message-card-text{font-family:var(--font-body);font-size:0.88rem;color:rgba(255,255,255,0.6);line-height:1.7}
+    .message-card-date{font-size:0.68rem;color:rgba(255,255,255,0.25);margin-top:12px;letter-spacing:0.08em}
+    .no-messages{color:rgba(255,255,255,0.3);font-family:var(--font-display);font-style:italic;font-size:1.1rem;padding:40px 0}
+
+    /* Weekend Itinerary */
+    #itinerary{padding:var(--section-pad) var(--gutter);background:var(--pearl);text-align:center}
+    .itinerary-days{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1100px;margin:3rem auto 0;text-align:left}
+    .itinerary-day{background:var(--white);border-radius:6px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.07)}
+    .itinerary-day-header{background:var(--navy-deep);padding:20px 24px;color:var(--white)}
+    .itinerary-day-label{font-family:var(--font-body);font-size:0.62rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--champagne);margin-bottom:4px}
+    .itinerary-day-title{font-family:var(--font-display);font-size:1.4rem;font-weight:300}
+    .itinerary-events{padding:8px 0}
+    .itinerary-event{display:flex;gap:16px;padding:16px 24px;border-bottom:1px solid rgba(0,0,0,0.05)}
+    .itinerary-event:last-child{border-bottom:none}
+    .itinerary-time{font-family:var(--font-body);font-size:0.68rem;letter-spacing:0.1em;color:var(--champagne);min-width:56px;padding-top:2px;text-transform:uppercase}
+    .itinerary-event-title{font-family:var(--font-body);font-size:0.88rem;font-weight:500;color:var(--navy);margin-bottom:3px}
+    .itinerary-event-sub{font-size:0.78rem;color:rgba(15,43,61,0.5);line-height:1.5}
+    .itinerary-tbd{font-family:var(--font-display);font-style:italic;font-size:0.85rem;color:rgba(15,43,61,0.35);padding:20px 24px}
     /* Sound toggle */
     #sound-btn{position:fixed;bottom:28px;right:28px;z-index:500;width:48px;height:48px;border-radius:50%;background:rgba(15,43,61,0.82);border:1px solid rgba(201,169,110,0.3);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background 0.3s,transform 0.2s;box-shadow:0 4px 24px rgba(0,0,0,0.3)}
     #sound-btn:hover{background:rgba(201,169,110,0.18);transform:scale(1.08)}
@@ -486,6 +536,7 @@
       <p class="t-eyebrow reveal" style="text-align:center">The Celebration</p>
       <h2 class="t-heading reveal reveal-delay-1 split-reveal" style="text-align:center;color:var(--white);margin-top:0.8rem">Wedding Details</h2>
       <p class="reveal reveal-delay-2" style="text-align:center;font-family:var(--font-display);font-style:italic;font-size:clamp(1rem,2vw,1.4rem);color:rgba(255,255,255,0.4);margin-top:0.8rem">Full details revealed with the official date announcement.</p>
+      <div style="text-align:center"><button class="cal-btn reveal" id="cal-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Save the Date to Calendar</button></div>
       <div class="details-grid reveal reveal-delay-3">
         <div class="detail-card">
           <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
@@ -836,6 +887,75 @@
         <div class="faq-item"><div class="faq-q" role="button" tabindex="0" aria-expanded="false"><span class="faq-q-text">Is this a kid-friendly wedding?</span><div class="faq-icon" aria-hidden="true">+</div></div><div class="faq-a"><p class="faq-a-inner">Details about our guest policy will be in the formal invitation. We'll communicate this well in advance so families can plan accordingly.</p></div></div>
         <div class="faq-item"><div class="faq-q" role="button" tabindex="0" aria-expanded="false"><span class="faq-q-text">When should I book flights and hotels?</span><div class="faq-icon" aria-hidden="true">+</div></div><div class="faq-a"><p class="faq-a-inner">As soon as the date is announced, we recommend booking quickly. Hawaii is an extremely popular destination and rates rise significantly. We'll give as much advance notice as possible.</p></div></div>
         <div class="faq-item"><div class="faq-q" role="button" tabindex="0" aria-expanded="false"><span class="faq-q-text">More questions?</span><div class="faq-icon" aria-hidden="true">+</div></div><div class="faq-a"><p class="faq-a-inner">More will be added as details are finalized. Use the RSVP notes field to send a question, or reach out to Lauren or Rolando directly. We'll update this section as the date approaches.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEEKEND ITINERARY -->
+  <section id="itinerary" aria-label="Weekend Itinerary">
+    <div class="container">
+      <p class="t-eyebrow reveal" style="text-align:center">The Weekend</p>
+      <h2 class="t-heading reveal reveal-delay-1 split-reveal" style="text-align:center;margin-top:0.8rem">Weekend Itinerary</h2>
+      <p class="reveal reveal-delay-2" style="text-align:center;font-family:var(--font-display);font-style:italic;font-size:clamp(1rem,2vw,1.3rem);color:var(--text-muted);margin-top:0.8rem">Three days of celebration in paradise. Full schedule coming soon.</p>
+      <div class="itinerary-days reveal reveal-delay-3">
+        <div class="itinerary-day">
+          <div class="itinerary-day-header"><p class="itinerary-day-label">Day One</p><p class="itinerary-day-title">Welcome to Waikiki</p></div>
+          <div class="itinerary-events">
+            <div class="itinerary-event"><span class="itinerary-time">Afternoon</span><div><p class="itinerary-event-title">Arrival &amp; Check-In</p><p class="itinerary-event-sub">Settle into your hotel and explore the beach</p></div></div>
+            <div class="itinerary-event"><span class="itinerary-time">Evening</span><div><p class="itinerary-event-title">Welcome Dinner</p><p class="itinerary-event-sub">Casual gathering with the wedding party</p></div></div>
+          </div>
+        </div>
+        <div class="itinerary-day">
+          <div class="itinerary-day-header"><p class="itinerary-day-label">Day Two</p><p class="itinerary-day-title">The Big Day</p></div>
+          <div class="itinerary-events">
+            <div class="itinerary-event"><span class="itinerary-time">Morning</span><div><p class="itinerary-event-title">Getting Ready</p><p class="itinerary-event-sub">Hair, makeup &amp; pre-ceremony preparations</p></div></div>
+            <div class="itinerary-event"><span class="itinerary-time">TBD</span><div><p class="itinerary-event-title">Ceremony</p><p class="itinerary-event-sub">Location &amp; time to be announced</p></div></div>
+            <div class="itinerary-event"><span class="itinerary-time">Evening</span><div><p class="itinerary-event-title">Reception</p><p class="itinerary-event-sub">Dinner, dancing &amp; celebrating all night</p></div></div>
+          </div>
+        </div>
+        <div class="itinerary-day">
+          <div class="itinerary-day-header"><p class="itinerary-day-label">Day Three</p><p class="itinerary-day-title">Aloha Morning</p></div>
+          <div class="itinerary-events">
+            <div class="itinerary-event"><span class="itinerary-time">Morning</span><div><p class="itinerary-event-title">Farewell Brunch</p><p class="itinerary-event-sub">One last meal together before we say aloha</p></div></div>
+            <div class="itinerary-event"><span class="itinerary-time">Afternoon</span><div><p class="itinerary-event-title">Beach Time</p><p class="itinerary-event-sub">Optional — stay and soak up the sun</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAIKIKI MAP -->
+  <section id="waikiki-map" aria-label="Waikiki Map">
+    <div class="container">
+      <p class="t-eyebrow reveal" style="text-align:center">Find Your Way</p>
+      <h2 class="t-heading reveal reveal-delay-1 split-reveal" style="text-align:center;margin-top:0.8rem">Waikiki, Oahu</h2>
+      <p class="reveal reveal-delay-2" style="text-align:center;font-family:var(--font-display);font-style:italic;font-size:clamp(1rem,2vw,1.3rem);color:var(--text-muted);margin-top:0.8rem">Your home base in paradise — explore the neighborhood.</p>
+      <div class="map-wrap reveal reveal-delay-3">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14893.772153823357!2d-157.8399!3d21.2793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c006df9053d6abf%3A0x5e076ded4a0e0a0a!2sWaikiki%2C%20Honolulu%2C%20HI!5e0!3m2!1sen!2sus" title="Waikiki map" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="map-pins reveal reveal-delay-4">
+        <a href="https://maps.google.com/?q=Waikiki+Beach+Honolulu" target="_blank" rel="noopener" class="map-pin"><span class="map-pin-dot"></span>Waikiki Beach</a>
+        <a href="https://maps.google.com/?q=Diamond+Head+Honolulu" target="_blank" rel="noopener" class="map-pin"><span class="map-pin-dot"></span>Diamond Head</a>
+        <a href="https://maps.google.com/?q=Honolulu+International+Airport" target="_blank" rel="noopener" class="map-pin"><span class="map-pin-dot"></span>HNL Airport</a>
+        <a href="https://maps.google.com/?q=Royal+Hawaiian+Center+Waikiki" target="_blank" rel="noopener" class="map-pin"><span class="map-pin-dot"></span>Royal Hawaiian Center</a>
+        <a href="https://maps.google.com/?q=Ala+Moana+Center+Honolulu" target="_blank" rel="noopener" class="map-pin"><span class="map-pin-dot"></span>Ala Moana Center</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUEST MESSAGE WALL -->
+  <section id="message-wall" aria-label="Guest Messages">
+    <div class="container">
+      <p class="t-eyebrow reveal" style="text-align:center;color:var(--champagne)">Leave a Note</p>
+      <h2 class="t-heading reveal reveal-delay-1 split-reveal" style="text-align:center;color:var(--white);margin-top:0.8rem">Message Wall</h2>
+      <p class="reveal reveal-delay-2" style="text-align:center;font-family:var(--font-display);font-style:italic;font-size:clamp(1rem,2vw,1.3rem);color:rgba(255,255,255,0.4);margin-top:0.8rem">Share your excitement with Lauren &amp; Rolando.</p>
+      <div class="message-form reveal reveal-delay-3">
+        <input type="text" id="msg-name" placeholder="Your name" maxlength="60">
+        <textarea id="msg-text" rows="3" placeholder="Leave a message for the happy couple..." maxlength="300"></textarea>
+        <button id="msg-submit">Post Message ✦</button>
+      </div>
+      <div class="messages-grid" id="messages-grid">
+        <p class="no-messages" id="no-messages">Be the first to leave a message! 🌺</p>
       </div>
     </div>
   </section>
@@ -1552,6 +1672,82 @@
         audio.play().then(()=>{ fade(0.32,2000); btn.classList.add('playing'); on=true; }).catch(()=>{});
       } else { fade(0,1500); btn.classList.remove('playing'); on=false; }
     });
+  })();
+
+  /* ─── 3D TILT CARDS ──────────────────────────────────────────── */
+  (function initTilt() {
+    qsa('.detail-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width  - 0.5;
+        const y = (e.clientY - r.top)  / r.height - 0.5;
+        card.style.transform = `perspective(600px) rotateY(${x*14}deg) rotateX(${-y*14}deg) scale(1.03)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+  })();
+
+  /* ─── SAVE TO CALENDAR ───────────────────────────────────────── */
+  (function initCalendar() {
+    const btn = qs('#cal-btn');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      // Google Calendar link — update dates when confirmed
+      const title  = encodeURIComponent('Lauren & Rolando — Wedding in Waikiki');
+      const detail = encodeURIComponent('Destination wedding in Waikiki, Oahu, Hawaii. Details coming soon — visit https://rolandosalazar56774.github.io/SAVETHEDATE for updates.');
+      const loc    = encodeURIComponent('Waikiki, Oahu, Hawaii');
+      // Placeholder date: Jan 1 2027 — update when confirmed
+      const start  = '20270101';
+      const end    = '20270103';
+      const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${start}/${end}&details=${detail}&location=${loc}`;
+      window.open(url, '_blank');
+    });
+  })();
+
+  /* ─── GUEST MESSAGE WALL ─────────────────────────────────────── */
+  (function initMessageWall() {
+    const nameEl   = qs('#msg-name');
+    const textEl   = qs('#msg-text');
+    const submitEl = qs('#msg-submit');
+    const grid     = qs('#messages-grid');
+    const noMsg    = qs('#no-messages');
+    if (!submitEl) return;
+
+    function loadMessages() {
+      const msgs = JSON.parse(localStorage.getItem('wedding_messages') || '[]');
+      if (!grid) return;
+      if (msgs.length === 0) { if (noMsg) noMsg.style.display = ''; return; }
+      if (noMsg) noMsg.style.display = 'none';
+      grid.innerHTML = '';
+      msgs.slice().reverse().forEach(m => {
+        const card = document.createElement('div');
+        card.className = 'message-card';
+        card.innerHTML = `<p class="message-card-name">${escHtml(m.name)}</p>
+          <p class="message-card-text">${escHtml(m.text)}</p>
+          <p class="message-card-date">${m.date}</p>`;
+        grid.appendChild(card);
+      });
+    }
+
+    function escHtml(s) {
+      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    submitEl.addEventListener('click', () => {
+      const name = nameEl?.value.trim();
+      const text = textEl?.value.trim();
+      if (!name || !text) { alert('Please enter your name and a message.'); return; }
+      const msgs = JSON.parse(localStorage.getItem('wedding_messages') || '[]');
+      msgs.push({ name, text, date: new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'}) });
+      localStorage.setItem('wedding_messages', JSON.stringify(msgs));
+      if (nameEl) nameEl.value = '';
+      if (textEl) textEl.value = '';
+      loadMessages();
+    });
+
+    loadMessages();
   })();
 
   /* ─── INITIAL SCROLL SETUP ───────────────────────────────────── */
