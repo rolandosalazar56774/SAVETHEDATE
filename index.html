@@ -21,9 +21,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --pearl:#F8F6F2; --white:#FFFFFF; --ocean:#2C6E8A; --ocean-light:#4A9BB8;
-      --navy:#0F2B3D; --navy-deep:#071926; --champagne:#C9A96E; --champagne-lt:#E8D5A8;
-      --gold:#D4A944; --sunset:#E8835A;
+      --pearl:#FFFDF9; --white:#FFFFFF; --ocean:#4A8FA8; --ocean-light:#7AB8CC;
+      --navy:#1A3A4A; --navy-deep:#0D2535; --champagne:#C4913A; --champagne-lt:#E8C97A;
+      --gold:#D4A42A; --sunset:#E8835A; --coral:#E07A5F; --sand:#F5ECD7;
+      --warm-white:#FFF8EE; --text-dark:#1A2E3B; --text-mid:#4A5E6A;
       --font-display:'Cormorant Garamond',Georgia,serif;
       --font-heading:'Playfair Display',Georgia,serif;
       --font-body:'Jost',system-ui,sans-serif;
@@ -34,7 +35,7 @@
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth;font-size:16px}
-    body{font-family:var(--font-body);font-weight:300;color:var(--navy);background:var(--pearl);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    body{font-family:var(--font-body);font-weight:300;color:var(--text-dark);background:var(--warm-white);overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:17px}
     img{display:block;max-width:100%;height:auto}
     a{color:inherit;text-decoration:none}
     button{cursor:pointer;border:none;background:none;font-family:inherit}
@@ -188,7 +189,7 @@
     .map-pin:hover .map-pin-dot{background:var(--navy)}
 
     /* Guest Message Wall */
-    #message-wall{padding:var(--section-pad) var(--gutter);background:var(--navy-deep);text-align:center}
+    #message-wall{padding:var(--section-pad) var(--gutter);background:var(--sand);text-align:center}
     .message-form{max-width:560px;margin:2.5rem auto 3rem;display:flex;flex-direction:column;gap:16px}
     .message-form input,.message-form textarea{background:rgba(255,255,255,0.05);border:1px solid rgba(201,169,110,0.2);color:var(--white);font-family:var(--font-body);font-size:0.9rem;padding:14px 18px;border-radius:2px;outline:none;transition:border-color 0.3s;resize:none}
     .message-form input::placeholder,.message-form textarea::placeholder{color:rgba(255,255,255,0.25)}
@@ -252,7 +253,7 @@
     @keyframes waveSweep{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
     /* Details */
-    #details{padding:var(--section-pad) var(--gutter);background:var(--navy-deep);color:var(--white);text-align:center}
+    #details{padding:var(--section-pad) var(--gutter);background:linear-gradient(160deg,#1A3A4A 0%,#0D2535 100%);color:var(--white);text-align:center}
     .details-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;margin-top:4rem;border:1px solid rgba(201,169,110,0.12)}
     .detail-card{padding:3rem 2rem;border:1px solid rgba(201,169,110,0.12);text-align:center;transition:background 0.4s;position:relative;overflow:hidden}
     .detail-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--champagne),transparent);transform:scaleX(0);transition:transform 0.5s var(--ease-luxury)}
@@ -285,7 +286,7 @@
     @media(max-width:768px){.story-layout{grid-template-columns:1fr}.story-image-stack{height:320px}.story-img-1{height:240px}.story-img-2{height:170px}.story-float-text{display:none}}
 
     /* Gallery */
-    #gallery{padding:var(--section-pad) var(--gutter);background:var(--navy-deep);color:var(--white)}
+    #gallery{padding:var(--section-pad) var(--gutter);background:var(--warm-white);color:var(--text-dark)}
     .gallery-header{text-align:center;margin-bottom:3rem}
     .masonry-grid{columns:4;column-gap:10px}
     @media(max-width:1100px){.masonry-grid{columns:3}}
@@ -307,7 +308,7 @@
     .lb-counter{position:absolute;bottom:1.5rem;left:50%;transform:translateX(-50%);font-size:0.65rem;letter-spacing:0.25em;color:rgba(255,255,255,0.45)}
 
     /* Flight path */
-    #flight-path{padding:var(--section-pad) var(--gutter);background:var(--navy-deep);color:var(--white);text-align:center;overflow:hidden}
+    #flight-path{padding:var(--section-pad) var(--gutter);background:linear-gradient(160deg,#1A3A4A,#0D2535);color:var(--white);text-align:center;overflow:hidden}
     .flight-map-wrap{position:relative;max-width:860px;margin:3rem auto 0}
     #flight-svg{width:100%;height:auto}
     .flight-city{font-family:var(--font-body);font-size:0.65rem;letter-spacing:0.2em;fill:rgba(255,255,255,0.6)}
@@ -323,7 +324,7 @@
     @keyframes pulseRing{0%{r:6;opacity:0.8}100%{r:22;opacity:0}}
 
     /* Travel */
-    #travel{padding:var(--section-pad) var(--gutter);background:linear-gradient(180deg,#0d2436 0%,var(--navy-deep) 100%);color:var(--white)}
+    #travel{padding:var(--section-pad) var(--gutter);background:linear-gradient(160deg,#1A3A4A 0%,#0D2535 100%);color:var(--white)}
     .travel-header{text-align:center;margin-bottom:4rem}
     .travel-tabs{display:flex;gap:0;justify-content:center;margin-bottom:3rem;border-bottom:1px solid rgba(201,169,110,0.15);flex-wrap:wrap}
     .travel-tab{padding:0.9rem 2rem;font-size:0.65rem;letter-spacing:0.25em;text-transform:uppercase;color:rgba(255,255,255,0.45);cursor:pointer;transition:color 0.3s;border-bottom:2px solid transparent;margin-bottom:-1px;background:none;font-family:var(--font-body)}
@@ -358,7 +359,7 @@
     .explore-card:hover .explore-card-desc{max-height:80px}
 
     /* FAQ */
-    #faq{padding:var(--section-pad) var(--gutter);background:var(--navy-deep);color:var(--white)}
+    #faq{padding:var(--section-pad) var(--gutter);background:var(--sand);color:var(--text-dark)}
     .faq-header{text-align:center;margin-bottom:4rem}
     .faq-list{max-width:740px;margin:0 auto}
     .faq-item{border-bottom:1px solid rgba(201,169,110,0.15)}
@@ -377,7 +378,7 @@
     .registry-sub{font-size:0.8rem;color:rgba(15,43,61,0.5);letter-spacing:0.1em;line-height:1.7}
 
     /* RSVP */
-    #rsvp{padding:var(--section-pad) var(--gutter);background:linear-gradient(160deg,var(--navy-deep) 0%,#0d2436 100%);color:var(--white)}
+    #rsvp{padding:var(--section-pad) var(--gutter);background:linear-gradient(160deg,#1A3A4A 0%,#0D2535 100%);color:var(--white)}
     .rsvp-header{text-align:center;margin-bottom:4rem}
     .rsvp-form-wrap{max-width:680px;margin:0 auto}
     .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:1.2rem}
@@ -484,7 +485,7 @@
     }
 
     /* ─── GUEST PHOTO UPLOAD ─────────────────────────────────────── */
-    #guest-photos{padding:var(--section-pad) var(--gutter);background:var(--navy-deep);text-align:center}
+    #guest-photos{padding:var(--section-pad) var(--gutter);background:var(--warm-white);text-align:center}
     .upload-zone{max-width:500px;margin:2.5rem auto;border:2px dashed rgba(201,169,110,0.3);border-radius:8px;padding:3rem 2rem;cursor:pointer;transition:border-color 0.3s,background 0.3s;position:relative}
     .upload-zone:hover,.upload-zone.drag-over{border-color:var(--champagne);background:rgba(201,169,110,0.05)}
     .upload-zone input[type=file]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
@@ -598,9 +599,59 @@
       .hero-dot{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center}
     }
 
-    /* ═══════════════════════════════════════════════
-       IPHONE 5-STAR UX — All new features
-    ═══════════════════════════════════════════════ */
+    /* ═══ STICKY BOTTOM NAV — iPhone first ═══ */
+    #bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:900;background:rgba(13,37,53,0.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid rgba(196,145,58,0.2);padding:8px 0 max(8px,env(safe-area-inset-bottom));display:flex;justify-content:space-around;align-items:center}
+    .bnav-item{display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 12px;cursor:pointer;background:none;border:none;color:rgba(255,255,255,0.45);transition:color 0.25s;min-width:60px;-webkit-tap-highlight-color:transparent}
+    .bnav-item.active{color:var(--champagne)}
+    .bnav-item svg{width:22px;height:22px;stroke-width:1.5}
+    .bnav-label{font-family:var(--font-body);font-size:0.58rem;letter-spacing:0.12em;text-transform:uppercase}
+    .bnav-rsvp{background:var(--champagne)!important;color:var(--navy-deep)!important;border-radius:24px;padding:8px 20px!important}
+    .bnav-rsvp .bnav-label{color:var(--navy-deep);font-weight:500}
+    /* Push content above bottom nav */
+    body{padding-bottom:calc(70px + env(safe-area-inset-bottom))!important}
+
+    /* ═══ DRESS CODE SECTION ═══ */
+    #dress-code{padding:var(--section-pad) var(--gutter);background:var(--warm-white);text-align:center}
+    .dress-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:500px;margin:2.5rem auto 0}
+    .dress-card{border-radius:8px;overflow:hidden;aspect-ratio:3/4;position:relative;background:var(--sand)}
+    .dress-card-label{position:absolute;bottom:0;left:0;right:0;padding:16px 12px;background:linear-gradient(transparent,rgba(13,37,53,0.85));color:#fff;font-family:var(--font-body);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;text-align:left}
+    .dress-card-emoji{font-size:3.5rem;display:flex;align-items:center;justify-content:center;height:100%;padding-bottom:40px}
+    .dress-note{margin-top:1.5rem;font-family:var(--font-display);font-style:italic;font-size:1.1rem;color:var(--text-mid);max-width:400px;margin-left:auto;margin-right:auto}
+
+    /* ═══ VIBE STATEMENT — hero section ═══ */
+    .hero-vibe{font-family:var(--font-body);font-size:0.62rem;letter-spacing:0.45em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:1rem}
+
+    /* ═══ SAT FLIGHT INFO ═══ */
+    .flight-info-card{background:rgba(255,255,255,0.06);border:1px solid rgba(196,145,58,0.2);border-radius:8px;padding:20px;margin-top:1.5rem;text-align:left}
+    .flight-info-route{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+    .flight-info-city{font-family:var(--font-display);font-size:1.4rem;color:#fff}
+    .flight-info-arrow{color:var(--champagne);font-size:1.2rem;flex-shrink:0}
+    .flight-info-detail{font-size:0.8rem;color:rgba(255,255,255,0.55);line-height:1.8}
+    .flight-info-detail strong{color:var(--champagne-lt);font-weight:400}
+
+    /* ═══ SECTION TIGHTENING for mobile ═══ */
+    @media(max-width:768px){
+      :root{--section-pad:3.5rem}
+      #dot-nav{display:none} /* replaced by bottom nav */
+      .hero-scroll-hint{display:none}
+      .flip-clock{gap:0.6rem;padding:1.5rem 1rem}
+      .flip-card{height:56px;width:48px}
+      .flip-top span,.flip-bottom span,.flip-next-top span,.flip-next-bottom span{font-size:1.8rem}
+      .flip-sep{font-size:1.8rem}
+      .love-timeline{margin-top:2.5rem}
+      .itinerary-days{gap:12px}
+      .dress-grid{grid-template-columns:1fr 1fr;gap:8px}
+      .weather-widget{padding:14px 16px}
+      .map-wrap iframe{height:280px!important}
+    }
+
+    /* ═══ FAQ lighter styling ═══ */
+    .faq-item{background:#fff;border:1px solid rgba(196,145,58,0.15)}
+    .faq-question{color:var(--text-dark)}
+    .faq-answer{color:var(--text-mid)}
+
+    /* ═══ Remove export button from guest view ═══ */
+    .export-wrap{display:none}
 
     /* Safe area insets for iPhone notch/Dynamic Island */
     body { padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
@@ -699,6 +750,30 @@
 <body>
   <!-- Greeting bar -->
   <div id="greeting-bar" aria-live="polite"></div>
+
+  <!-- STICKY BOTTOM NAV -->
+  <nav id="bottom-nav" aria-label="Main navigation">
+    <button class="bnav-item active" data-section="hero" aria-label="Home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span class="bnav-label">Home</span>
+    </button>
+    <button class="bnav-item" data-section="story" aria-label="Our Story">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      <span class="bnav-label">Story</span>
+    </button>
+    <button class="bnav-item bnav-rsvp" data-section="rsvp" aria-label="RSVP">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+      <span class="bnav-label">RSVP</span>
+    </button>
+    <button class="bnav-item" data-section="travel" aria-label="Travel">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      <span class="bnav-label">Travel</span>
+    </button>
+    <button class="bnav-item" data-section="waikiki-map" aria-label="Map">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span class="bnav-label">Map</span>
+    </button>
+  </nav>
   <!-- Offline bar -->
   <div id="offline-bar">📵 You're offline — the site still works!</div>
   <!-- Pull to refresh hint -->
@@ -772,13 +847,13 @@
     <canvas id="particle-canvas" aria-hidden="true"></canvas>
     <div id="petals-container" aria-hidden="true"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Aloha From Paradise</p>
+      <p class="hero-eyebrow">We're getting married in paradise</p>
       <h1 class="hero-title">Waikiki<br><em>Awaits</em></h1>
       <p class="hero-names"><span id="tw-text"></span><span class="tw-cursor" aria-hidden="true">|</span></p>
-      <p class="hero-sub">Join us in Waikiki, Hawaii &nbsp;·&nbsp; 2027</p>
+      <p class="hero-sub">Beach Ceremony &nbsp;·&nbsp; Resort Reception &nbsp;·&nbsp; Waikiki, Hawaii &nbsp;·&nbsp; 2027</p>
       <div class="hero-cta">
-        <a href="#save-the-date" class="btn-primary" aria-label="Scroll to save the date">
-          <span>Enter Experience</span>
+        <a href="#save-the-date" class="btn-primary" aria-label="See the details">
+          <span>See the Details</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -806,7 +881,7 @@
       <h2 class="t-heading reveal reveal-delay-1 split-reveal">Lauren <em>&amp;</em> Rolando</h2>
       <p class="std-location reveal reveal-delay-2">Waikiki · Oahu, Hawaii</p>
       <div class="std-year reveal reveal-delay-2" aria-label="Coming 2027">2027</div>
-      <p class="std-announcement reveal reveal-delay-3">Official date announcement coming soon.</p>
+      <p class="std-announcement reveal reveal-delay-3">Mark your calendar. Clear your schedule. Book that flight. The official date drops soon — and trust us, you don't want to miss this one.</p>
       <div class="flip-clock reveal reveal-delay-4" role="status" aria-label="Countdown to wedding" id="flip-clock">
         <div class="flip-unit" id="flip-days">
           <div class="flip-card" id="fc-days">
@@ -927,8 +1002,8 @@
         <div class="story-text">
           <p class="t-eyebrow reveal">Our Story</p>
           <h2 class="t-heading reveal reveal-delay-1 split-reveal">Two Hearts,<br>One Paradise</h2>
-          <p class="t-body reveal reveal-delay-2">Some love stories are written in quiet moments — a laugh shared across a crowded room, a conversation that stretched until sunrise, a hand reached for without thinking twice. Lauren and Rolando's is one of those stories.</p>
-          <p class="t-body reveal reveal-delay-3" style="color:rgba(15,43,61,0.5);font-style:italic">Replace this with your own story. Tell them how you met, how he proposed, and why Hawaii felt like the only place in the world worthy of this moment.</p>
+          <p class="t-body reveal reveal-delay-2">We don't know exactly how to put into words what it feels like to find your person — but we know this: when you know, you know. And we knew.</p>
+          <p class="t-body reveal reveal-delay-3" style="color:var(--text-mid);font-style:italic">Our full story is coming soon. For now, just know that we've been waiting for this moment — and we want you there when it happens. In Hawaii. On a beach. With everyone we love.</p>
           <div class="love-timeline reveal reveal-delay-3">
             <div class="love-event">
               <div class="love-event-dot"></div>
@@ -1002,7 +1077,7 @@
           <circle cx="640" cy="120" r="6" fill="var(--ocean-light)"/>
           <!-- Labels -->
           <text x="160" y="220" class="flight-city" text-anchor="middle">TEXAS</text>
-          <text x="160" y="238" class="flight-city-name" text-anchor="middle">Dallas · Houston</text>
+          <text x="160" y="238" class="flight-city-name" text-anchor="middle">San Antonio, TX</text>
           <text x="640" y="148" class="flight-city" text-anchor="middle">HAWAII</text>
           <text x="640" y="166" class="flight-city-name" text-anchor="middle">Waikiki, Oahu</text>
           <!-- Plane animated along arc -->
@@ -1098,7 +1173,15 @@
           <div class="travel-card reveal">
             <svg class="tc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012.86 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             <p class="tc-title">Nearest Airport</p>
-            <p class="tc-body">Fly into <strong style="color:rgba(255,255,255,0.85)">Honolulu International (HNL)</strong> — the primary gateway to Oahu, just minutes from Waikiki. Most major U.S. cities offer direct or one-stop service.</p>
+            <p class="tc-body">Fly into <strong style="color:rgba(255,255,255,0.85)">Honolulu International (HNL)</strong> — the gateway to Oahu, just 20 minutes from Waikiki by rideshare.</p>
+            <div class="flight-info-card">
+              <div class="flight-info-route">
+                <span class="flight-info-city">SAT</span>
+                <span class="flight-info-arrow">✈</span>
+                <span class="flight-info-city">HNL</span>
+              </div>
+              <p class="flight-info-detail"><strong>San Antonio → Honolulu</strong><br>Typically 1 stop via Dallas (DFW), Houston (IAH), or Los Angeles (LAX)<br>Total travel time: ~10–13 hours<br>Estimated cost: $500–$900 round trip per person<br><br><strong>Best airlines:</strong> American, United, Hawaiian Airlines<br><strong>Best time to book:</strong> 6–9 months ahead for best fares</p>
+            </div>
             <span class="tc-badge">Primary Airport</span>
           </div>
           <div class="travel-card reveal reveal-delay-1">
@@ -1311,6 +1394,34 @@
     </div>
   </section>
 
+  <!-- DRESS CODE -->
+  <section id="dress-code" aria-label="Dress Code">
+    <div class="container">
+      <p class="t-eyebrow reveal" style="text-align:center">What to Wear</p>
+      <h2 class="t-heading reveal reveal-delay-1 split-reveal" style="text-align:center;margin-top:0.8rem">Resort Formal</h2>
+      <p class="reveal reveal-delay-2" style="text-align:center;font-family:var(--font-display);font-style:italic;font-size:clamp(1rem,2vw,1.3rem);color:var(--text-mid);margin-top:0.8rem;max-width:480px;margin-left:auto;margin-right:auto">Think elegant, think breezy. We're on a beach in Hawaii — dress beautifully and stay comfortable.</p>
+      <div class="dress-grid reveal reveal-delay-3">
+        <div class="dress-card">
+          <div class="dress-card-emoji">👗</div>
+          <div class="dress-card-label">Flowy dresses & elegant jumpsuits</div>
+        </div>
+        <div class="dress-card">
+          <div class="dress-card-emoji">👔</div>
+          <div class="dress-card-label">Linen suits & dress shirts</div>
+        </div>
+        <div class="dress-card">
+          <div class="dress-card-emoji">👠</div>
+          <div class="dress-card-label">Wedges & dressy sandals welcome</div>
+        </div>
+        <div class="dress-card">
+          <div class="dress-card-emoji">🎨</div>
+          <div class="dress-card-label">Colors encouraged — no white please</div>
+        </div>
+      </div>
+      <p class="dress-note reveal reveal-delay-4">Hawaiian prints are absolutely welcome — wear the island.</p>
+    </div>
+  </section>
+
   <!-- WAIKIKI MAP -->
   <section id="waikiki-map" aria-label="Waikiki Map">
     <div class="container">
@@ -1366,8 +1477,8 @@
     <div class="container">
       <div class="rsvp-header">
         <p class="t-eyebrow reveal" style="color:var(--champagne)">You're Invited</p>
-        <h2 class="t-heading reveal reveal-delay-1 split-reveal" style="color:var(--white);margin-top:0.8rem">RSVP</h2>
-        <p class="reveal reveal-delay-2" style="color:rgba(255,255,255,0.4);font-size:0.85rem;margin-top:0.8rem">Let us know you'll be celebrating with us in paradise.</p>
+        <h2 class="t-heading reveal reveal-delay-1 split-reveal" style="color:var(--white);margin-top:0.8rem">Will You Join Us?</h2>
+        <p class="reveal reveal-delay-2" style="color:rgba(255,255,255,0.5);font-family:var(--font-display);font-style:italic;font-size:clamp(1rem,2vw,1.3rem);margin-top:0.8rem">30 seats. One beach. A night we'll never forget. Let us know you're coming.</p>
         <div class="live-count-wrap reveal reveal-delay-3">
           <span class="live-count-dot"></span>
           <span class="live-count-text"><span class="live-count-num" id="live-count">0</span> guests have RSVP'd so far</span>
@@ -1412,16 +1523,6 @@
             </div>
           </div>
           <div class="form-group">
-            <label class="form-label">Meal Preference</label>
-            <div class="meal-options" id="meal-options">
-              <div class="meal-option" data-meal="fish"><span class="meal-option-emoji">🐟</span>Fresh Fish</div>
-              <div class="meal-option" data-meal="chicken"><span class="meal-option-emoji">🍗</span>Chicken</div>
-              <div class="meal-option" data-meal="vegetarian"><span class="meal-option-emoji">🥗</span>Vegetarian</div>
-              <div class="meal-option" data-meal="vegan"><span class="meal-option-emoji">🌿</span>Vegan</div>
-            </div>
-            <input type="hidden" id="rsvp-meal" name="meal" value="">
-          </div>
-          <div class="form-group">
             <label class="form-label" for="rsvp-song">Song Request 🎵</label>
             <input type="text" id="rsvp-song" name="song" class="form-input" placeholder="What song will get you on the dance floor?" autocomplete="off"/>
           </div>
@@ -1455,7 +1556,7 @@
   <footer id="footer" role="contentinfo">
     <div class="container">
       <p class="footer-monogram">L &amp; R</p>
-      <p class="footer-tagline">Aloha From Paradise</p>
+      <p class="footer-tagline">See you on the beach. 🌊</p>
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="#save-the-date">Save the Date</a>
         <a href="#story">Our Story</a>
@@ -1470,7 +1571,7 @@
       </div>
       <p class="footer-location">Waikiki · Oahu, Hawaii</p>
       <p class="footer-year">Lauren Rodriguez &amp; Rolando Salazar · 2027</p>
-      <p class="footer-copy">Made with love for a destination to remember.</p>
+      <p class="footer-copy">We cannot wait to celebrate with you in paradise. Aloha. 🌺</p>
     </div>
   </footer>
 
@@ -2636,6 +2737,35 @@
     }
     // Remove skeletons once gallery JS loads images
     setTimeout(() => { qsa('.skeleton', grid).forEach(s => s.remove()); }, 2000);
+  })();
+
+  /* ─── STICKY BOTTOM NAV ──────────────────────────────────────── */
+  (function initBottomNav() {
+    const items = qsa('.bnav-item');
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        const section = qs('#' + item.dataset.section);
+        if (!section) return;
+        const offset = 80;
+        const top = section.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+        if (navigator.vibrate) navigator.vibrate(8);
+      });
+    });
+
+    // Update active state on scroll
+    const sections = ['hero','story','rsvp','travel','waikiki-map']
+      .map(id => qs('#' + id)).filter(Boolean);
+
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          items.forEach(item => item.classList.toggle('active', item.dataset.section === id));
+        }
+      });
+    }, { threshold: 0.4 });
+    sections.forEach(s => obs.observe(s));
   })();
 
   /* ─── INITIAL SCROLL SETUP ───────────────────────────────────── */
